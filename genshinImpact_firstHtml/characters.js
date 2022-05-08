@@ -1,6 +1,7 @@
 function myFunction(){
     var name = document.getElementById("nameChar").value;
-    if(name == "Fischl"){
+    var level = document.getElementById("levelChar").value;
+    if(name == "Fischl" && level == "0/20"){
         document.getElementById("elName").innerHTML = name;
         document.getElementById("elHP").innerHTML = 770;
         document.getElementById("elAtk").innerHTML = 20;
@@ -31,8 +32,6 @@ function myFunction(){
         document.getElementById("elPhysicalDMG").innerHTML = 0.0;
         document.getElementById("elPhysicalRes").innerHTML = 0.0;
         document.getElementById("elImg").style.display='inline-block';
-        /*var charFischl = new fischl();
-        fischl.baseInfo();*/
     }
 }
 

@@ -85,13 +85,13 @@ app-root .container .body-container-2{
     display: block;
 }
 
-.font-style{
-    color: white;
-}
-
 .fieldset-style{
     background-color: rgba(255, 255, 255, 0.5);
     border: white;
+}
+
+.fieldset-position{
+    display: inline;
 }
 
 .character-list{
@@ -102,4 +102,12 @@ app-root .container .body-container-2{
     width: 15%;
 }
 
+/*accordion style*/
+.accordion{
+    margin-top: 5px;
+}
+
+.accordion-header{
+    padding: 10px 10px;
+}
 

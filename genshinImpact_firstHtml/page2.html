@@ -11,26 +11,35 @@
 
 <body>
     <app-root>
+        <!--header-->
         <div class="header">
-            <img src="img/genshin_logo.jpg" class="logo-style">
-            <a href="page1.html">Fast Build</a>
-            <a href="#">Advance Build</a>
-            <a href="page3.html">My Archive</a>
+            <div class="navbar">
+                <div class="navbar-menu">
+                    <img src="img/genshin_logo.jpg" class="logo-style">
+                    <a href="page1.html" class="a-style">Fast Build</a>
+                    <a href="#" class="active">Advance Build</a>
+                    <a href="page3.html" class="a-style">My Archive</a>
+                </div>
+            </div>
         </div>
-        <div class="container">
+        <div class="container body-image">
             <div class="body-container-1">
 
+                <!--form-->
                 <form>
+                    <!--Character name and level-->
                     <fieldset class="fieldset-style">
-                        <legend class="font-style">Character</legend>
-                        <label class="font-style">Name:
-                            <input type="text" class="display-form">
+                        <legend>Character</legend>
+
+                        <label>Name:
+                            <input type="text" id="nameChar" class="display-form">
                         </label>
-                        <label class="font-style">Level:
-                            <select name="level" class="display-form">
+
+                        <label>Level:
+                            <select name="level" id="levelChar" class="display-form">
                                 <option value="0/20">0/20 (Ascension 0)</option>
                                 <option value="20/20">20/20 (Ascension 0)</option>
-                                <option value="20/40">20/20 (Ascension 1)</option>
+                                <option value="20/40">20/40 (Ascension 1)</option>
                                 <option value="40/40">40/40 (Ascension 1)</option>
                                 <option value="40/50">40/50 (Ascension 2)</option>
                                 <option value="50/50">50/50 (Ascension 2)</option>
@@ -40,17 +49,249 @@
                                 <option value="70/70">70/70 (Ascension 4)</option>
                                 <option value="70/80">70/80 (Ascension 5)</option>
                                 <option value="80/80">80/80 (Ascension 5)</option>
-                                <option value="80/90">70/80 (Ascension 6)</option>
-                                <option value="90/90">80/80 (Ascension 6)</option>
+                                <option value="80/90">80/90 (Ascension 6)</option>
+                                <option value="90/90">90/90 (Ascension 6)</option>
                             </select>
-                        </label>
+                        </label>  
                     </fieldset>
+
+                    <!--Character attributes-->
+                    <details class="accordion">
+                        <summary class="accordion-header">
+                            Attributes
+                        </summary>
+                        <fieldset class="fieldset-style fieldset-position">
+                            <legend>Base Stats</legend>
+
+                            <label>Max HP:
+                                <input type="number" id="maxHP" class="display-form">
+                            </label>
+
+                            <label>Atk:
+                                <input type="number" id="atk" class="display-form">
+                            </label>
+
+                            <label>Def:
+                                <input type="number" id="def" class="display-form">
+                            </label>
+
+                            <label>Elemental Master:
+                                <input type="number" id="elMas" class="display-form">
+                            </label>
+
+                            <label>Max Stamina:
+                                <input type="number" id="stamina" class="display-form">
+                            </label>
+                        </fieldset>
+                    
+                        <fieldset class="fieldset-style fieldset-position">
+                            <legend>Advanced Stats</legend>
+
+                            <label>Crit Rate:
+                                <input type="number" id="critRate" class="display-form">
+                            </label>
+
+                            <label>Crit Dmg:
+                                <input type="number" id="critDMG" class="display-form">
+                            </label>
+
+                            <label>Healing Bonus:
+                                <input type="number" id="healBonus" class="display-form">
+                            </label>
+
+                            <label>Incoming Healing:
+                                <input type="number" id="inHealing" class="display-form">
+                            </label>
+
+                            <label>Energy Recharge:
+                                <input type="number" id="eneRech" class="display-form">
+                            </label>
+
+                            <label>CD Reduction:
+                                <input type="number" id="cdRed" class="display-form">
+                            </label>
+
+                            <label>Shield Strenght:
+                                <input type="number" id="shield" class="display-form">
+                            </label>
+
+                        </fieldset>
+
+                        <fieldset class="fieldset-style fieldset-position">
+                            <legend>Elemental Type</legend>
+
+                            <label>Pyro DMG:
+                                <input type="text" id="pyroDMG" class="display-form">
+                            </label>
+
+                            <label>Pyro RES:
+                                <input type="number" id="pyroRES" class="display-form">
+                            </label>
+
+                            <label>Hydro DMG:
+                                <input type="number" id="hydroDMG" class="display-form">
+                            </label>
+
+                            <label>Hydro RES:
+                                <input type="number" id="hydroRES" class="display-form">
+                            </label>
+
+                            <label>Dendro DMG:
+                                <input type="number" id="denDMG" class="display-form">
+                            </label>
+
+                            <label>Dendro RES:
+                                <input type="number" id="denRES" class="display-form">
+                            </label>
+
+                            <label>Cryo DMG:
+                                <input type="number" id="cryoDMG" class="display-form">
+                            </label>
+
+                            <label>Cryo RES:
+                                <input type="number" id="cryoRES" class="display-form">
+                            </label>
+                        </fieldset>
+
+                        <fieldset class="fieldset-style fieldset-position">
+                            <legend>Elemental Type</legend>
+
+                            <label>Electro DMG:
+                                <input type="text" id="elecDMG" class="display-form">
+                            </label>
+
+                            <label>Electro RES:
+                                <input type="number" id="elecRES" class="display-form">
+                            </label>
+
+                            <label>Anemo DMG:
+                                <input type="number" id="aneDMG" class="display-form">
+                            </label>
+
+                            <label>Anemo RES:
+                                <input type="number" id="AneRES" class="display-form">
+                            </label>
+
+                            <label>Geo DMG:
+                                <input type="number" id="geoDMG" class="display-form">
+                            </label>
+
+                            <label>Geo RES:
+                                <input type="number" id="geoRES" class="display-form">
+                            </label>
+
+                            <label>Physical DMG:
+                                <input type="number" id="phyDMG" class="display-form">
+                            </label>
+
+                            <label>Physical RES:
+                                <input type="number" id="phyRES" class="display-form">
+                            </label>
+                        </fieldset>
+                    </details>
+
+                    <!--Character weapon-->
+                    <details class="accordion">
+                        <summary class="accordion-header">
+                            Weapon
+                        </summary>
+
+                        <fieldset class="fieldset-style fieldset-position">
+                            <legend>Base Stats</legend>
+                            <label>Name:
+                                <input type="text" id="weapon" class="display-form">
+                            </label>
+
+                            <label>Level:
+                                <select name="level" id="levelWea" class="display-form">
+                                    <option value="0/20">0/20 (Ascension 0)</option>
+                                    <option value="20/20">20/20 (Ascension 0)</option>
+                                    <option value="20/40">20/40 (Ascension 1)</option>
+                                    <option value="40/40">40/40 (Ascension 1)</option>
+                                    <option value="40/50">40/50 (Ascension 2)</option>
+                                    <option value="50/50">50/50 (Ascension 2)</option>
+                                    <option value="50/60">50/60 (Ascension 3)</option>
+                                    <option value="60/60">60/60 (Ascension 3)</option>
+                                    <option value="60/70">60/70 (Ascension 4)</option>
+                                    <option value="70/70">70/70 (Ascension 4)</option>
+                                    <option value="70/80">70/80 (Ascension 5)</option>
+                                    <option value="80/80">80/80 (Ascension 5)</option>
+                                    <option value="80/90">80/90 (Ascension 6)</option>
+                                    <option value="90/90">90/90 (Ascension 6)</option>
+                                </select>
+                            </label>
+                        
+                            <label>Base ATK:
+                                <input type="number" id="weaponATK" class="display-form">
+                            </label>
+                        </fieldset>
+
+                        <fieldset class="fieldset-style fieldset-position">
+                            <legend>Advanced Stats</legend>
+
+                            <label>2nd Stat Type:
+                                <select name="level" id="2ndStat" class="display-form">
+                                    <option value="ATK">ATK</option>
+                                    <option value="DEF">DEF</option>
+                                    <option value="HP">HP</option>
+                                    <option value="CD">CRIT DMG</option>
+                                    <option value="CR">CRIT Rate</option>
+                                    <option value="EM">Elemental Mastery</option>
+                                    <option value="ER">Energy Recharge</option>
+                                    <option value="PD">Physical DMG</option>
+                                </select>
+                            </label>
+
+                            <label>2nd Stat Value:
+                                <input type="number" id="weaponATK" class="display-form">
+                            </label>
+
+                            <label>Refinement:<br>
+                                <input type="radio" value="1" id="1" checked>
+                                <label for="1">1</label>
+                                <input type="radio" value="2" id="2">
+                                <label for="2">2</label>
+                                <input type="radio" value="3" id="3">
+                                <label for="3">3</label>
+                                <input type="radio" value="4" id="4">
+                                <label for="4">4</label>
+                                <input type="radio" value="5" id="5">
+                                <label for="5">5</label>
+                            </label>
+                        </fieldset>
+                    </details>
+
+                    <!--Character artifacts-->
+                    <details class="accordion">
+                        <summary class="accordion-header">
+                            Artifacts
+                        </summary>
+                    </details>
+
+                    <!--Character constellation-->
+                    <details class="accordion">
+                        <summary class="accordion-header">
+                            Constellation
+                        </summary>
+                    </details>
+
+                    <!--Character talents-->
+                    <details class="accordion">
+                        <summary class="accordion-header">
+                            Talents
+                        </summary>
+                    </details><br>
+                    <input type="button" value="Save!" onclick="myFunction()">
                 </form>
+
             </div>
+
+            <!--results-->
             <div class="body-container-2">
             </div>
         </div>
     </app-root>
+
 </body>
 
 </html>
