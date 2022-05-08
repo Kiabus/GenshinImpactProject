@@ -280,6 +280,168 @@
                         <summary class="accordion-header">
                             Talents
                         </summary>
+
+                        <!--Normal Attack-->
+                        <fieldset class="fieldset-style fieldset-position">
+                            <legend>Normal Attack</legend>
+
+                            <label>Name:
+                                <input type="text" id="nameNormAtk" class="display-form">
+                            </label>
+
+                            <label>Level:
+                                <select name="level" id="levelNormAtk" class="display-form">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                </select>
+                            </label>
+
+                            <label>1-Hit DMG:
+                                <input type="number" id="1hit" class="display-form">
+                            </label>
+
+                            <label>2-Hit DMG:
+                                <input type="number" id="2hit" class="display-form">
+                            </label>
+
+                            <label>3-Hit DMG:
+                                <input type="number" id="3hit" class="display-form">
+                            </label>
+
+                            <label>4-Hit DMG:
+                                <input type="number" id="4hit" class="display-form">
+                            </label>
+
+                            <label>Charged Attack DMG:
+                                <input type="number" id="eneRech" class="display-form">
+                            </label>
+
+                            <label>Charged Attack Stamina Cost:
+                                <input type="number" id="cdRed" class="display-form">
+                            </label>
+
+                            <label>Plunge DMG:
+                                <input type="number" id="eneRech" class="display-form">
+                            </label>
+
+                            <label>Low/High Plunge DMG:
+                                <input type="number" id="cdRed" class="display-form">/<input type="number" id="cdRed" class="display-form">
+                            </label>
+                        </fieldset>
+
+                        <!--Elemental Skill-->
+                        <fieldset class="fieldset-style fieldset-position">
+                            <legend>Elemental Skill</legend>
+
+                            <label>Name:
+                                <input type="text" id="nameElSkill" class="display-form">
+                            </label>
+
+                            <label>Level:
+                                <select name="level" id="levelElSkill" class="display-form">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                </select>
+                            </label>
+                        </fieldset>
+
+                        <!--Elemental Burst-->
+                        <fieldset class="fieldset-style fieldset-position">
+                            <legend>Elemental Burst</legend>
+
+                            <label>Name:
+                                <input type="text" id="nameElBurst" class="display-form">
+                            </label>
+
+                            <label>Level:
+                                <select name="level" id="levelElBurst" class="display-form">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                </select>
+                            </label>
+                        </fieldset>
+
+                        <!--1st Ascension Passive-->
+                        <fieldset class="fieldset-style fieldset-position">
+                            <legend>1st Ascension Passive</legend>
+
+                            <label>Name:
+                                <input type="text" id="name1stPassive" class="display-form">
+                            </label>
+
+                            <label>Level:
+                                <select name="level" id="level1stPassive" class="display-form" disabled>
+                                    <option value="1">1</option>
+                                </select>
+                            </label>
+
+                            <span style="color:red">Unlocks at Character Ascension Phase 1!</span>
+                        </fieldset>
+
+                        <!--4th Ascension Passive-->
+                        <fieldset class="fieldset-style fieldset-position">
+                            <legend>4th Ascension Passive</legend>
+
+                            <label>Name:
+                                <input type="text" id="name4thPassive" class="display-form">
+                            </label>
+
+                            <label>Level:
+                                <select name="level" id="level4thPassive" class="display-form" disabled>
+                                    <option value="1">1</option>
+                                </select>
+                            </label>
+
+                            <span style="color:red">Unlocks at Character Ascension Phase 4!</span>
+                        </fieldset>
+
+                        <!--Utility Passive-->
+                        <fieldset class="fieldset-style fieldset-position">
+                            <legend>Utility Passive</legend>
+
+                            <label>Name:
+                                <input type="text" id="nameUtilPassive" class="display-form">
+                            </label>
+
+                            <label>Level:
+                                <select name="level" id="levelUtilPassive" class="display-form" disabled>
+                                    <option value="1">1</option>
+                                </select>
+                            </label>
+                        </fieldset>
+
                     </details><br>
                     <input type="button" value="Save!" onclick="myFunction()">
                 </form>
