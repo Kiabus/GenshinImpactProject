@@ -11,39 +11,35 @@
 
 <body>
     <app-root>
+        <!--header-->
         <div class="header">
-            <img src="img/genshin_logo.jpg" class="logo-style">
-            <a href="page1.html">Fast Build</a>
-            <a href="page2.html">Advance Build</a>
-            <a href="#">My Archive</a>
+            <div class="navbar">
+                <div class="navbar-menu">
+                    <img src="img/genshin_logo.jpg" class="logo-style">
+                    <a href="page1.html" class="a-style">Fast Build</a>
+                    <a href="page2.html" class="a-style">Low Build</a>
+                    <a href="#" class="active">My Archive</a>
+                </div>
+            </div>
         </div>
-        <div class="container">
-            <div class="body-container-1">
 
+        <div class="container body-image">
+            <div class="body-container-0">
+                <p class="paragraph-style">
+                    On this section you can retrieve a character base statistics by his name and his level/ascension that you have saved in the Low Build section.
+                </p>  
+            </div>
+
+            <div class="body-container-1">
+                <!--form-->
                 <form>
                     <fieldset class="fieldset-style">
-                        <legend class="font-style">Character</legend>
-                        <label class="font-style">Name:
-                            <input type="text" class="display-form">
-                        </label>
-                        <label class="font-style">Level:
-                            <select name="level" class="display-form">
-                                <option value="0/20">0/20 (Ascension 0)</option>
-                                <option value="20/20">20/20 (Ascension 0)</option>
-                                <option value="20/40">20/20 (Ascension 1)</option>
-                                <option value="40/40">40/40 (Ascension 1)</option>
-                                <option value="40/50">40/50 (Ascension 2)</option>
-                                <option value="50/50">50/50 (Ascension 2)</option>
-                                <option value="50/60">50/60 (Ascension 3)</option>
-                                <option value="60/60">60/60 (Ascension 3)</option>
-                                <option value="60/70">60/70 (Ascension 4)</option>
-                                <option value="70/70">70/70 (Ascension 4)</option>
-                                <option value="70/80">70/80 (Ascension 5)</option>
-                                <option value="80/80">80/80 (Ascension 5)</option>
-                                <option value="80/90">70/80 (Ascension 6)</option>
-                                <option value="90/90">80/80 (Ascension 6)</option>
-                            </select>
-                        </label>
+                        <legend>Character</legend>
+
+                        <label>Name:
+                            <input type="text" id="nameChar" class="display-form">
+                        </label><br>
+                        <input type="button" value="Load!" onclick="myFunction()">
                     </fieldset>
                 </form>
             </div>

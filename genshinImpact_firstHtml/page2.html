@@ -17,14 +17,21 @@
                 <div class="navbar-menu">
                     <img src="img/genshin_logo.jpg" class="logo-style">
                     <a href="page1.html" class="a-style">Fast Build</a>
-                    <a href="#" class="active">Advance Build</a>
+                    <a href="#" class="active">Low Build</a>
                     <a href="page3.html" class="a-style">My Archive</a>
                 </div>
             </div>
         </div>
         <div class="container body-image">
-            <div class="body-container-1">
+            <div class="body-container-0">
+                <p class="paragraph-style">
+                    On this section you can insert manually the statistics of your character and save it into the archive when you click the button "Save!".<br>
+                    Based on the weapon and the artifact you wil insert, the statistics will be updates when you click the button "Update!".<br>     
+                    You can save more than one editing of the same character.                           
+                </p>  
+            </div>
 
+            <div class="body-container-1">       
                 <!--form-->
                 <form>
                     <!--Character name and level-->
@@ -52,7 +59,7 @@
                                 <option value="80/90">80/90 (Ascension 6)</option>
                                 <option value="90/90">90/90 (Ascension 6)</option>
                             </select>
-                        </label>  
+                        </label><br>
                     </fieldset>
 
                     <!--Character attributes-->
@@ -230,15 +237,15 @@
                             <legend>Advanced Stats</legend>
 
                             <label>2nd Stat Type:
-                                <select name="level" id="2ndStat" class="display-form">
-                                    <option value="ATK">ATK</option>
-                                    <option value="DEF">DEF</option>
-                                    <option value="HP">HP</option>
-                                    <option value="CD">CRIT DMG</option>
-                                    <option value="CR">CRIT Rate</option>
-                                    <option value="EM">Elemental Mastery</option>
-                                    <option value="ER">Energy Recharge</option>
-                                    <option value="PD">Physical DMG</option>
+                                <select name="2ndStat" id="2ndStat" class="display-form">
+                                    <option value="weaponATK">ATK</option>
+                                    <option value="weaponDEF">DEF</option>
+                                    <option value="weaponHP">HP</option>
+                                    <option value="weaponCD">CRIT DMG</option>
+                                    <option value="weaponCR">CRIT Rate</option>
+                                    <option value="weaponEM">Elemental Mastery</option>
+                                    <option value="weaponER">Energy Recharge</option>
+                                    <option value="weaponPD">Physical DMG</option>
                                 </select>
                             </label>
 
@@ -247,15 +254,15 @@
                             </label>
 
                             <label>Refinement:<br>
-                                <input type="radio" value="1" id="1" checked>
+                                <input type="radio" value="refi1" id="refi1" checked>
                                 <label for="1">1</label>
-                                <input type="radio" value="2" id="2">
+                                <input type="radio" value="refi2" id="refi2">
                                 <label for="2">2</label>
-                                <input type="radio" value="3" id="3">
+                                <input type="radio" value="refi3" id="refi3">
                                 <label for="3">3</label>
-                                <input type="radio" value="4" id="4">
+                                <input type="radio" value="refi4" id="refi4">
                                 <label for="4">4</label>
-                                <input type="radio" value="5" id="5">
+                                <input type="radio" value="refi5" id="refi5">
                                 <label for="5">5</label>
                             </label>
                         </fieldset>
@@ -266,6 +273,433 @@
                         <summary class="accordion-header">
                             Artifacts
                         </summary>
+                        <!--Flower of Life-->
+                        <fieldset class="fieldset-style fieldset-position">
+                            <legend>Flower of Life</legend>
+                            <!--Set-->
+                            <label>Set:
+                                <select name="flower" id="flower" class="display-form">
+                                    <optgroup label="1*">
+                                        <option value="Initiate">Initiate</option>
+                                    </optgroup>
+                                    <optgroup label="1-3*">
+                                        <option value="Adventurer">Adventurer</option>
+                                        <option value="Lucky Dog">Lucky Dog</option>
+                                        <option value="Traveling Doctor">Traveling Doctor</option>
+                                    </optgroup>
+                                    <optgroup label="3-4*">
+                                        <option value="Resolution of Sojourney">Resolution of Sojourney</option>
+                                        <option value="Tiny Miracle">Tiny Miracle</option>
+                                        <option value="Berserker">Berserker</option>
+                                        <option value="Instructor">Instructor</option>
+                                        <option value="The Exiler">The Exile</option>
+                                        <option value="Defender's Will">Defender's Will</option>
+                                        <option value="Brave Heart">Brave Heart</option>
+                                        <option value="Martial Artist">Martial Artist</option>
+                                        <option value="Gambler">Gambler</option>
+                                        <option value="Scholar">Scholar</option>
+                                        <option value="Prayers for Wisdom" disabled>Prayers for Wisdom</option>
+                                        <option value="Prayers for Destiny" disabled>Prayers for Destiny</option>
+                                        <option value="Prayers for Illumination" disabled>Prayers for Illumination</option>
+                                        <option value="Prayers for Springtime" disabled>Prayers for Springtime</option>
+                                    </optgroup>
+                                    <optgroup label="4-5*">
+                                        <option value="Gladiator's Finale">Gladiator's Finale</option>
+                                        <option value="Wanderer's Troupe">Wanderer's Troupe</option>
+                                        <option value="Noblesse Oblige">Noblesse Oblige</option>
+                                        <option value="Bloodstained Chivalry">Bloodstained Chivalry</option>
+                                        <option value="Maiden Beloved">Maiden Beloved</option>
+                                        <option value="Viridescent Venerer">Viridescent Venerer</option>
+                                        <option value="Archaic Petra">Archaic Petra</option>
+                                        <option value="Retracing Bolide">Retracing Bolide</option>
+                                        <option value="Thundersoother">Thundersoother</option>
+                                        <option value="Thundering Fury">Thundering Fury</option>
+                                        <option value="Lavawalker">Lavawalker</option>
+                                        <option value="Crimson Witch of Flames">Crimson Witch of Flames</option>
+                                        <option value="Blizzard Strayer">Blizzard Strayer</option>
+                                        <option value="Heart of Depth">Heart of Depth</option>
+                                        <option value="Tenacity of the Millelith">Tenacity of the Millelith</option>
+                                        <option value="Pale Flame">Pale Flame</option>
+                                        <option value="Shimenawa's Reminiscence">Shimenawa's Reminiscence</option>
+                                        <option value="Emblem of Severed Fate">Emblem of Severed Fate</option>
+                                        <option value="Husk of Opulent Dreams">Husk of Opulent Dreams</option>
+                                        <option value="Ocean-Hued Clam">Ocean-Hued Clam</option>
+                                        <option value="Vermillion Hereafter">Vermillion Hereafter</option>
+                                        <option value="Echoes of an Offering">Echoes of an Offering</option>
+                                    </optgroup>
+                                </select>
+                            </label> 
+                            <!--TODO: compare dopo aver selezionato il set artifatto-->
+                            <div>Name: <span id="flowerName"></span></div>
+
+                            <label>HP:
+                                <input type="number" id="flowerHP" class="display-form">
+                            </label>
+
+                            <!--TODO: se si riesce, su js inserire comportamento che in base all'artefatto scelto, si disabilitano le * che non sono di tale artefatto-->
+                            <label>Rarity:
+                                <select name="flowerRarity" id="flowerRarity" class="display-form">
+                                    <option value="1*">1*</option>
+                                    <option value="2*">2*</option>
+                                    <option value="3*">3*</option>
+                                    <option value="4*">4*</option>
+                                    <option value="5*">5*</option>
+                                </select>
+                            </label>
+
+                            <!--TODO: mettere un bottone ADD che fa apparire ogni volta una select per scegliere il tipo di stato e un campo input per inserire il valore?-->
+
+                        </fieldset> 
+
+                        <!--Plume of Death-->
+                        <fieldset class="fieldset-style fieldset-position">
+                            <legend>Plume of Death</legend>
+                            <!--Set-->
+                            <label>Set:
+                                <select name="plume" id="plume" class="display-form">
+                                    <optgroup label="1*">
+                                        <option value="Initiate">Initiate</option>
+                                    </optgroup>
+                                    <optgroup label="1-3*">
+                                        <option value="Adventurer">Adventurer</option>
+                                        <option value="Lucky Dog">Lucky Dog</option>
+                                        <option value="Traveling Doctor">Traveling Doctor</option>
+                                    </optgroup>
+                                    <optgroup label="3-4*">
+                                        <option value="Resolution of Sojourney">Resolution of Sojourney</option>
+                                        <option value="Tiny Miracle">Tiny Miracle</option>
+                                        <option value="Berserker">Berserker</option>
+                                        <option value="Instructor">Instructor</option>
+                                        <option value="The Exiler">The Exile</option>
+                                        <option value="Defender's Will">Defender's Will</option>
+                                        <option value="Brave Heart">Brave Heart</option>
+                                        <option value="Martial Artist">Martial Artist</option>
+                                        <option value="Gambler">Gambler</option>
+                                        <option value="Scholar">Scholar</option>
+                                        <option value="Prayers for Wisdom" disabled>Prayers for Wisdom</option>
+                                        <option value="Prayers for Destiny" disabled>Prayers for Destiny</option>
+                                        <option value="Prayers for Illumination" disabled>Prayers for Illumination</option>
+                                        <option value="Prayers for Springtime" disabled>Prayers for Springtime</option>
+                                    </optgroup>
+                                    <optgroup label="4-5*">
+                                        <option value="Gladiator's Finale">Gladiator's Finale</option>
+                                        <option value="Wanderer's Troupe">Wanderer's Troupe</option>
+                                        <option value="Noblesse Oblige">Noblesse Oblige</option>
+                                        <option value="Bloodstained Chivalry">Bloodstained Chivalry</option>
+                                        <option value="Maiden Beloved">Maiden Beloved</option>
+                                        <option value="Viridescent Venerer">Viridescent Venerer</option>
+                                        <option value="Archaic Petra">Archaic Petra</option>
+                                        <option value="Retracing Bolide">Retracing Bolide</option>
+                                        <option value="Thundersoother">Thundersoother</option>
+                                        <option value="Thundering Fury">Thundering Fury</option>
+                                        <option value="Lavawalker">Lavawalker</option>
+                                        <option value="Crimson Witch of Flames">Crimson Witch of Flames</option>
+                                        <option value="Blizzard Strayer">Blizzard Strayer</option>
+                                        <option value="Heart of Depth">Heart of Depth</option>
+                                        <option value="Tenacity of the Millelith">Tenacity of the Millelith</option>
+                                        <option value="Pale Flame">Pale Flame</option>
+                                        <option value="Shimenawa's Reminiscence">Shimenawa's Reminiscence</option>
+                                        <option value="Emblem of Severed Fate">Emblem of Severed Fate</option>
+                                        <option value="Husk of Opulent Dreams">Husk of Opulent Dreams</option>
+                                        <option value="Ocean-Hued Clam">Ocean-Hued Clam</option>
+                                        <option value="Vermillion Hereafter">Vermillion Hereafter</option>
+                                        <option value="Echoes of an Offering">Echoes of an Offering</option>
+                                    </optgroup>
+                                </select>
+                            </label> 
+                            <!--TODO: compare dopo aver selezionato il set artifatto-->
+                            <div>Name: <span id="plumeName"></span></div>
+
+                            <label>ATK:
+                                <input type="number" id="plumeATK" class="display-form">
+                            </label>
+
+                            <!--Rarity-->
+                            <!--TODO: Se si riesce, su js inserire comportamento che in base all'artefatto scelto, si disabilitano le * che non sono di tale artefatto-->
+                            <label>Rarity:
+                                <select name="plumeRarity" id="plumeRarity" class="display-form">
+                                    <option value="1*">1*</option>
+                                    <option value="2*">2*</option>
+                                    <option value="3*">3*</option>
+                                    <option value="4*">4*</option>
+                                    <option value="5*">5*</option>
+                                </select>
+                            </label> 
+                        </fieldset> 
+
+                        <!--Sands of Eon-->
+                        <fieldset class="fieldset-style fieldset-position">
+                            <legend>Sands of Eon</legend>
+                            <!--Set-->
+                            <label>Set:
+                                <select name="clock" id="clock" class="display-form">
+                                    <optgroup label="1*">
+                                        <option value="Initiate">Initiate</option>
+                                    </optgroup>
+                                    <optgroup label="1-3*">
+                                        <option value="Adventurer">Adventurer</option>
+                                        <option value="Lucky Dog">Lucky Dog</option>
+                                        <option value="Traveling Doctor">Traveling Doctor</option>
+                                    </optgroup>
+                                    <optgroup label="3-4*">
+                                        <option value="Resolution of Sojourney">Resolution of Sojourney</option>
+                                        <option value="Tiny Miracle">Tiny Miracle</option>
+                                        <option value="Berserker">Berserker</option>
+                                        <option value="Instructor">Instructor</option>
+                                        <option value="The Exiler">The Exile</option>
+                                        <option value="Defender's Will">Defender's Will</option>
+                                        <option value="Brave Heart">Brave Heart</option>
+                                        <option value="Martial Artist">Martial Artist</option>
+                                        <option value="Gambler">Gambler</option>
+                                        <option value="Scholar">Scholar</option>
+                                        <option value="Prayers for Wisdom" disabled>Prayers for Wisdom</option>
+                                        <option value="Prayers for Destiny" disabled>Prayers for Destiny</option>
+                                        <option value="Prayers for Illumination" disabled>Prayers for Illumination</option>
+                                        <option value="Prayers for Springtime" disabled>Prayers for Springtime</option>
+                                    </optgroup>
+                                    <optgroup label="4-5*">
+                                        <option value="Gladiator's Finale">Gladiator's Finale</option>
+                                        <option value="Wanderer's Troupe">Wanderer's Troupe</option>
+                                        <option value="Noblesse Oblige">Noblesse Oblige</option>
+                                        <option value="Bloodstained Chivalry">Bloodstained Chivalry</option>
+                                        <option value="Maiden Beloved">Maiden Beloved</option>
+                                        <option value="Viridescent Venerer">Viridescent Venerer</option>
+                                        <option value="Archaic Petra">Archaic Petra</option>
+                                        <option value="Retracing Bolide">Retracing Bolide</option>
+                                        <option value="Thundersoother">Thundersoother</option>
+                                        <option value="Thundering Fury">Thundering Fury</option>
+                                        <option value="Lavawalker">Lavawalker</option>
+                                        <option value="Crimson Witch of Flames">Crimson Witch of Flames</option>
+                                        <option value="Blizzard Strayer">Blizzard Strayer</option>
+                                        <option value="Heart of Depth">Heart of Depth</option>
+                                        <option value="Tenacity of the Millelith">Tenacity of the Millelith</option>
+                                        <option value="Pale Flame">Pale Flame</option>
+                                        <option value="Shimenawa's Reminiscence">Shimenawa's Reminiscence</option>
+                                        <option value="Emblem of Severed Fate">Emblem of Severed Fate</option>
+                                        <option value="Husk of Opulent Dreams">Husk of Opulent Dreams</option>
+                                        <option value="Ocean-Hued Clam">Ocean-Hued Clam</option>
+                                        <option value="Vermillion Hereafter">Vermillion Hereafter</option>
+                                        <option value="Echoes of an Offering">Echoes of an Offering</option>
+                                    </optgroup>
+                                </select>
+                            </label> 
+
+                            <!--TODO: compare dopo aver selezionato il set artifatto-->
+                            <div>Name: <span id="clockName"></span></div>
+
+                            <label>Main Stat:
+                                <select name="clockMainStat" id="clockMainStat" class="display-form">
+                                    <option value="clockHP%">HP%</option>
+                                    <option value="clockATK%">ATK%</option>
+                                    <option value="clockDEF%">DEF%</option>
+                                    <option value="clockEM">Elemental Mastery</option>
+                                    <option value="clockER">Energy Recharge</option>
+                                </select>
+                            </label>
+
+                            <label>Value Main Stat:
+                                <input type="number" id="clockValueStat" class="display-form">
+                            </label>
+
+                            <!--Rarity-->
+                            <!--TODO: Se si riesce, su js inserire comportamento che in base all'artefatto scelto, si disabilitano le * che non sono di tale artefatto-->
+                            <label>Rarity:
+                                <select name="clockRarity" id="clockRarity" class="display-form">
+                                    <option value="1*">1*</option>
+                                    <option value="2*">2*</option>
+                                    <option value="3*">3*</option>
+                                    <option value="4*">4*</option>
+                                    <option value="5*">5*</option>
+                                </select>
+                            </label>
+                        </fieldset> 
+
+                        <!--Goblet of Eonothem-->
+                        <fieldset class="fieldset-style fieldset-position">
+                            <legend>Goblet of Eonothem</legend>
+                            <!--Set-->
+                            <label>Set:
+                                <select name="goblet" id="goblet" class="display-form">
+                                    <optgroup label="1*">
+                                        <option value="Initiate">Initiate</option>
+                                    </optgroup>
+                                    <optgroup label="1-3*">
+                                        <option value="Adventurer">Adventurer</option>
+                                        <option value="Lucky Dog">Lucky Dog</option>
+                                        <option value="Traveling Doctor">Traveling Doctor</option>
+                                    </optgroup>
+                                    <optgroup label="3-4*">
+                                        <option value="Resolution of Sojourney">Resolution of Sojourney</option>
+                                        <option value="Tiny Miracle">Tiny Miracle</option>
+                                        <option value="Berserker">Berserker</option>
+                                        <option value="Instructor">Instructor</option>
+                                        <option value="The Exiler">The Exile</option>
+                                        <option value="Defender's Will">Defender's Will</option>
+                                        <option value="Brave Heart">Brave Heart</option>
+                                        <option value="Martial Artist">Martial Artist</option>
+                                        <option value="Gambler">Gambler</option>
+                                        <option value="Scholar">Scholar</option>
+                                        <option value="Prayers for Wisdom" disabled>Prayers for Wisdom</option>
+                                        <option value="Prayers for Destiny" disabled>Prayers for Destiny</option>
+                                        <option value="Prayers for Illumination" disabled>Prayers for Illumination</option>
+                                        <option value="Prayers for Springtime" disabled>Prayers for Springtime</option>
+                                    </optgroup>
+                                    <optgroup label="4-5*">
+                                        <option value="Gladiator's Finale">Gladiator's Finale</option>
+                                        <option value="Wanderer's Troupe">Wanderer's Troupe</option>
+                                        <option value="Noblesse Oblige">Noblesse Oblige</option>
+                                        <option value="Bloodstained Chivalry">Bloodstained Chivalry</option>
+                                        <option value="Maiden Beloved">Maiden Beloved</option>
+                                        <option value="Viridescent Venerer">Viridescent Venerer</option>
+                                        <option value="Archaic Petra">Archaic Petra</option>
+                                        <option value="Retracing Bolide">Retracing Bolide</option>
+                                        <option value="Thundersoother">Thundersoother</option>
+                                        <option value="Thundering Fury">Thundering Fury</option>
+                                        <option value="Lavawalker">Lavawalker</option>
+                                        <option value="Crimson Witch of Flames">Crimson Witch of Flames</option>
+                                        <option value="Blizzard Strayer">Blizzard Strayer</option>
+                                        <option value="Heart of Depth">Heart of Depth</option>
+                                        <option value="Tenacity of the Millelith">Tenacity of the Millelith</option>
+                                        <option value="Pale Flame">Pale Flame</option>
+                                        <option value="Shimenawa's Reminiscence">Shimenawa's Reminiscence</option>
+                                        <option value="Emblem of Severed Fate">Emblem of Severed Fate</option>
+                                        <option value="Husk of Opulent Dreams">Husk of Opulent Dreams</option>
+                                        <option value="Ocean-Hued Clam">Ocean-Hued Clam</option>
+                                        <option value="Vermillion Hereafter">Vermillion Hereafter</option>
+                                        <option value="Echoes of an Offering">Echoes of an Offering</option>
+                                    </optgroup>
+                                </select>
+                            </label> 
+
+                            <!--TODO: compare dopo aver selezionato il set artifatto-->
+                            <div>Name: <span id="gobletName"></span></div>
+
+                            <label>Main Stat:
+                                <select name="gobletMainStat" id="gobletMainStat" class="display-form">
+                                    <option value="gobletHP%">HP%</option>
+                                    <option value="gobletATK%">ATK%</option>
+                                    <option value="gobletDEF%">DEF%</option>
+                                    <option value="gobletEM">Elemental Mastery</option>
+                                    <option value="gobletElDMG%">Elemental DMG Bonus%</option>
+                                    <option value="gobletPhyDMG%">Physical DMG Bonus%</option>
+                                </select>
+                            </label>
+
+                            <label>Value Main Stat:
+                                <input type="number" id="gobletValueStat" class="display-form">
+                            </label>
+
+                            <!--Rarity-->
+                            <!--TODO: Se si riesce, su js inserire comportamento che in base all'artefatto scelto, si disabilitano le * che non sono di tale artefatto-->
+                            <label>Rarity:
+                                <select name="gobletRarity" id="gobletRarity" class="display-form">
+                                    <option value="1*">1*</option>
+                                    <option value="2*">2*</option>
+                                    <option value="3*">3*</option>
+                                    <option value="4*">4*</option>
+                                    <option value="5*">5*</option>
+                                </select>
+                            </label> 
+                        </fieldset> 
+
+                        <!--Circlet of Logos-->
+                        <fieldset class="fieldset-style fieldset-position">
+                            <legend>Circlet of Logos</legend>
+                            <!--Set-->
+                            <label>Set:
+                                <select name="crown" id="crown" class="display-form">
+                                    <optgroup label="1*">
+                                        <option value="Initiate">Initiate</option>
+                                    </optgroup>
+                                    <optgroup label="1-3*">
+                                        <option value="Adventurer">Adventurer</option>
+                                        <option value="Lucky Dog">Lucky Dog</option>
+                                        <option value="Traveling Doctor">Traveling Doctor</option>
+                                    </optgroup>
+                                    <optgroup label="3-4*">
+                                        <option value="Resolution of Sojourney">Resolution of Sojourney</option>
+                                        <option value="Tiny Miracle">Tiny Miracle</option>
+                                        <option value="Berserker">Berserker</option>
+                                        <option value="Instructor">Instructor</option>
+                                        <option value="The Exiler">The Exile</option>
+                                        <option value="Defender's Will">Defender's Will</option>
+                                        <option value="Brave Heart">Brave Heart</option>
+                                        <option value="Martial Artist">Martial Artist</option>
+                                        <option value="Gambler">Gambler</option>
+                                        <option value="Scholar">Scholar</option>
+                                        <option value="Prayers for Wisdom">Prayers for Wisdom</option>
+                                        <option value="Prayers for Destiny">Prayers for Destiny</option>
+                                        <option value="Prayers for Illumination">Prayers for Illumination</option>
+                                        <option value="Prayers for Springtime">Prayers for Springtime</option>
+                                    </optgroup>
+                                    <optgroup label="4-5*">
+                                        <option value="Gladiator's Finale">Gladiator's Finale</option>
+                                        <option value="Wanderer's Troupe">Wanderer's Troupe</option>
+                                        <option value="Noblesse Oblige">Noblesse Oblige</option>
+                                        <option value="Bloodstained Chivalry">Bloodstained Chivalry</option>
+                                        <option value="Maiden Beloved">Maiden Beloved</option>
+                                        <option value="Viridescent Venerer">Viridescent Venerer</option>
+                                        <option value="Archaic Petra">Archaic Petra</option>
+                                        <option value="Retracing Bolide">Retracing Bolide</option>
+                                        <option value="Thundersoother">Thundersoother</option>
+                                        <option value="Thundering Fury">Thundering Fury</option>
+                                        <option value="Lavawalker">Lavawalker</option>
+                                        <option value="Crimson Witch of Flames">Crimson Witch of Flames</option>
+                                        <option value="Blizzard Strayer">Blizzard Strayer</option>
+                                        <option value="Heart of Depth">Heart of Depth</option>
+                                        <option value="Tenacity of the Millelith">Tenacity of the Millelith</option>
+                                        <option value="Pale Flame">Pale Flame</option>
+                                        <option value="Shimenawa's Reminiscence">Shimenawa's Reminiscence</option>
+                                        <option value="Emblem of Severed Fate">Emblem of Severed Fate</option>
+                                        <option value="Husk of Opulent Dreams">Husk of Opulent Dreams</option>
+                                        <option value="Ocean-Hued Clam">Ocean-Hued Clam</option>
+                                        <option value="Vermillion Hereafter">Vermillion Hereafter</option>
+                                        <option value="Echoes of an Offering">Echoes of an Offering</option>
+                                    </optgroup>
+                                </select>
+                            </label> 
+
+                            <!--TODO: compare dopo aver selezionato il set artifatto-->
+                            <div>Name: <span id="crownName"></span></div>
+
+                            <label>Main Stat:
+                                <select name="crownMainStat" id="crownMainStat" class="display-form">
+                                    <option value="crownHP%">HP%</option>
+                                    <option value="crownATK%">ATK%</option>
+                                    <option value="crownDEF%">DEF%</option>
+                                    <option value="crownEM">Elemental Mastery</option>
+                                    <option value="crownCR%">CRIT Rate%</option>
+                                    <option value="crownCD%">CRIT DMG%</option>
+                                    <option value="crownHB%">Healing Bonus%</option>
+                                </select>
+                            </label>
+
+                            <label>Value Main Stat:
+                                <input type="number" id="crownValueStat" class="display-form">
+                            </label>
+
+                            <!--Rarity-->
+                            <!--TODO: Se si riesce, su js inserire comportamento che in base all'artefatto scelto, si disabilitano le * che non sono di tale artefatto-->
+                            <label>Rarity:
+                                <select name="crownRarity" id="crownRarity" class="display-form">
+                                    <option value="1*">1*</option>
+                                    <option value="2*">2*</option>
+                                    <option value="3*">3*</option>
+                                    <option value="4*">4*</option>
+                                    <option value="5*">5*</option>
+                                </select>
+                            </label> 
+                        </fieldset> 
+
+                        <!--Set Bonus-->
+                        <fieldset class="fieldset-style fieldset-position">
+                            <legend>Set Bonus</legend>
+                            <!--TODO: al click su uno dei 2 elementi si apre tooltip con descrizione-->
+                            <div>
+                                <span>2-Pieces Set</span><br>
+                                <span>4-Pieces Set</span><br>
+                            </div>   
+                        </fieldset> 
                     </details>
 
                     <!--Character constellation-->
@@ -273,6 +707,22 @@
                         <summary class="accordion-header">
                             Constellation
                         </summary>
+
+                        <fieldset class="fieldset-style">
+                            <p>Check the character constellation you have unlocked</p>
+                            <input type="checkbox" id="C1" name="C1" value="C1">
+                            <label for="C1"> C1: <span id="C1name"></span></label><br>
+                            <input type="checkbox" id="C2" name="C2" value="C2">
+                            <label for="C2"> C2: <span id="C2name"></span></label><br>
+                            <input type="checkbox" id="C3" name="C3" value="C3">
+                            <label for="C3"> C3: <span id="C3name"></span></label><br>
+                            <input type="checkbox" id="C4" name="C4" value="C4">
+                            <label for="C4"> C4: <span id="C4name"></span></label><br>
+                            <input type="checkbox" id="C5" name="C5" value="C5">
+                            <label for="C5"> C5: <span id="C5name"></span></label><br>
+                            <input type="checkbox" id="C6" name="C6" value="C6">
+                            <label for="C6"> C6: <span id="C6name"></span></label><br>
+                        </fieldset>
                     </details>
 
                     <!--Character talents-->
@@ -443,7 +893,9 @@
                         </fieldset>
 
                     </details><br>
+                    <input type="button" value="Update!" onclick="myFunction()">
                     <input type="button" value="Save!" onclick="myFunction()">
+                    <input type="button" value="Reset!" onclick="myFunction()">
                 </form>
 
             </div>
