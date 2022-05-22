@@ -3,6 +3,7 @@ function myFunction(){
     var level = document.getElementById("levelChar").value;
     if(name == "Fischl" && level == "0/20"){
         document.getElementById("elName").innerHTML = name;
+        document.getElementById("weaponType").innerHTML = "Bow";
         document.getElementById("elHP").innerHTML = 770;
         document.getElementById("elAtk").innerHTML = 20;
         document.getElementById("elDef").innerHTML = 50;
