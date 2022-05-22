@@ -26,7 +26,7 @@
             <div class="body-container-0">
                 <p class="paragraph-style">
                     On this section you can insert manually the statistics of your character and save it into the archive when you click the button "Save!".<br>
-                    Based on the weapon and the artifact you wil insert, the statistics will be updates when you click the button "Update!".<br>     
+                    Based on the weapon and the artifact you insert, the statistics will be updates when you click the button "Update!".<br>     
                     You can save more than one editing of the same character.                           
                 </p>  
             </div>
@@ -332,10 +332,11 @@
                             <!--TODO: compare dopo aver selezionato il set artifatto-->
                             <div>Name: <span id="flowerName"></span></div>
 
-                            <label>HP:
+                            <label>HP (Main Stat Value):
                                 <input type="number" id="flowerHP" class="display-form">
                             </label>
 
+                            <!--Rarity-->
                             <!--TODO: se si riesce, su js inserire comportamento che in base all'artefatto scelto, si disabilitano le * che non sono di tale artefatto-->
                             <label>Rarity:
                                 <select name="flowerRarity" id="flowerRarity" class="display-form">
@@ -347,8 +348,75 @@
                                 </select>
                             </label>
 
+                            <!--Sub Stat-->
                             <!--TODO: mettere un bottone ADD che fa apparire ogni volta una select per scegliere il tipo di stato e un campo input per inserire il valore?-->
+                            <label>Sub Stat-1:
+                                <select name="flowerSubStat1" id="flowerSubStat1" class="display-form">
+                                    <option value="HPsub1">HP</option>
+                                    <option value="HP%sub1">HP%</option>
+                                    <option value="ATKsub1">ATK</option>
+                                    <option value="ATK%sub1">ATK%</option>
+                                    <option value="DEFsub1">DEF</option>
+                                    <option value="DEF%sub1">DEF%</option>
+                                    <option value="elMasSub1">Elemental Master</option>
+                                    <option value="eneRechSub1">Energy Recharge</option>
+                                    <option value="critDmgSub1">CRIT DMG</option>
+                                    <option value="critRateSub1">CRIT Rate</option>
+                                    <option value="phyDMGSub1">Physical DMG</option>    
+                                </select>
+                                <input type="number" id="flowerSub1" class="display-form">
+                            </label>
 
+                            <label>Sub Stat-2:
+                                <select name="flowerSubStat2" id="flowerSubStat2" class="display-form">
+                                    <option value="HPsub2">HP</option>
+                                    <option value="HP%sub2">HP%</option>
+                                    <option value="ATKsub2">ATK</option>
+                                    <option value="ATK%sub2">ATK%</option>
+                                    <option value="DEFsub2">DEF</option>
+                                    <option value="DEF%sub2">DEF%</option>
+                                    <option value="elMasSub2">Elemental Master</option>
+                                    <option value="eneRechSub2">Energy Recharge</option>
+                                    <option value="critDmgSub2">CRIT DMG</option>
+                                    <option value="critRateSub2">CRIT Rate</option>
+                                    <option value="phyDMGSub2">Physical DMG</option>    
+                                </select>
+                                <input type="number" id="flowerSub2" class="display-form">
+                            </label>
+                            
+                            <label>Sub Stat-3:
+                                <select name="flowerSubStat3" id="flowerSubStat3" class="display-form">
+                                    <option value="HPsub3">HP</option>
+                                    <option value="HP%sub3">HP%</option>
+                                    <option value="ATKsub3">ATK</option>
+                                    <option value="ATK%sub3">ATK%</option>
+                                    <option value="DEFsub3">DEF</option>
+                                    <option value="DEF%sub3">DEF%</option>
+                                    <option value="elMasSub3">Elemental Master</option>
+                                    <option value="eneRechSub3">Energy Recharge</option>
+                                    <option value="critDmgSub3">CRIT DMG</option>
+                                    <option value="critRateSub3">CRIT Rate</option>
+                                    <option value="phyDMGSub3">Physical DMG</option>    
+                                </select>
+                                <input type="number" id="flowerSub3" class="display-form">
+                            </label>
+
+                            <label>Sub Stat-4:
+                                <select name="flowerSubStat4" id="flowerSubStat4" class="display-form">
+                                    <option value="HPsub4">HP</option>
+                                    <option value="HP%sub4">HP%</option>
+                                    <option value="ATKsub4">ATK</option>
+                                    <option value="ATK%sub4">ATK%</option>
+                                    <option value="DEFsub4">DEF</option>
+                                    <option value="DEF%sub4">DEF%</option>
+                                    <option value="elMasSub4">Elemental Master</option>
+                                    <option value="eneRechSub4">Energy Recharge</option>
+                                    <option value="critDmgSub4">CRIT DMG</option>
+                                    <option value="critRateSub4">CRIT Rate</option>
+                                    <option value="phyDMGSub4">Physical DMG</option>    
+                                </select>
+                                <input type="number" id="flowerSub4" class="display-form">
+                            </label>
                         </fieldset> 
 
                         <!--Plume of Death-->
@@ -410,7 +478,7 @@
                             <!--TODO: compare dopo aver selezionato il set artifatto-->
                             <div>Name: <span id="plumeName"></span></div>
 
-                            <label>ATK:
+                            <label>ATK (Main Stat Value):
                                 <input type="number" id="plumeATK" class="display-form">
                             </label>
 
@@ -425,6 +493,76 @@
                                     <option value="5*">5*</option>
                                 </select>
                             </label> 
+
+                            <!--Sub Stat-->
+                            <!--TODO: mettere un bottone ADD che fa apparire ogni volta una select per scegliere il tipo di stato e un campo input per inserire il valore?-->
+                            <label>Sub Stat-1:
+                                <select name="plumeSubStat1" id="plumeSubStat1" class="display-form">
+                                    <option value="HPsub1">HP</option>
+                                    <option value="HP%sub1">HP%</option>
+                                    <option value="ATKsub1">ATK</option>
+                                    <option value="ATK%sub1">ATK%</option>
+                                    <option value="DEFsub1">DEF</option>
+                                    <option value="DEF%sub1">DEF%</option>
+                                    <option value="elMasSub1">Elemental Master</option>
+                                    <option value="eneRechSub1">Energy Recharge</option>
+                                    <option value="critDmgSub1">CRIT DMG</option>
+                                    <option value="critRateSub1">CRIT Rate</option>
+                                    <option value="phyDMGSub1">Physical DMG</option>    
+                                </select>
+                                <input type="number" id="flowerSub1" class="display-form">
+                            </label>
+
+                            <label>Sub Stat-2:
+                                <select name="plumeSubStat2" id="plumeSubStat2" class="display-form">
+                                    <option value="HPsub2">HP</option>
+                                    <option value="HP%sub2">HP%</option>
+                                    <option value="ATKsub2">ATK</option>
+                                    <option value="ATK%sub2">ATK%</option>
+                                    <option value="DEFsub2">DEF</option>
+                                    <option value="DEF%sub2">DEF%</option>
+                                    <option value="elMasSub2">Elemental Master</option>
+                                    <option value="eneRechSub2">Energy Recharge</option>
+                                    <option value="critDmgSub2">CRIT DMG</option>
+                                    <option value="critRateSub2">CRIT Rate</option>
+                                    <option value="phyDMGSub2">Physical DMG</option>    
+                                </select>
+                                <input type="number" id="flowerSub2" class="display-form">
+                            </label>
+                            
+                            <label>Sub Stat-3:
+                                <select name="plumeSubStat3" id="plumeSubStat3" class="display-form">
+                                    <option value="HPsub3">HP</option>
+                                    <option value="HP%sub3">HP%</option>
+                                    <option value="ATKsub3">ATK</option>
+                                    <option value="ATK%sub3">ATK%</option>
+                                    <option value="DEFsub3">DEF</option>
+                                    <option value="DEF%sub3">DEF%</option>
+                                    <option value="elMasSub3">Elemental Master</option>
+                                    <option value="eneRechSub3">Energy Recharge</option>
+                                    <option value="critDmgSub3">CRIT DMG</option>
+                                    <option value="critRateSub3">CRIT Rate</option>
+                                    <option value="phyDMGSub3">Physical DMG</option>    
+                                </select>
+                                <input type="number" id="flowerSub3" class="display-form">
+                            </label>
+
+                            <label>Sub Stat-4:
+                                <select name="plumeSubStat4" id="plumeSubStat4" class="display-form">
+                                    <option value="HPsub4">HP</option>
+                                    <option value="HP%sub4">HP%</option>
+                                    <option value="ATKsub4">ATK</option>
+                                    <option value="ATK%sub4">ATK%</option>
+                                    <option value="DEFsub4">DEF</option>
+                                    <option value="DEF%sub4">DEF%</option>
+                                    <option value="elMasSub4">Elemental Master</option>
+                                    <option value="eneRechSub4">Energy Recharge</option>
+                                    <option value="critDmgSub4">CRIT DMG</option>
+                                    <option value="critRateSub4">CRIT Rate</option>
+                                    <option value="phyDMGSub4">Physical DMG</option>    
+                                </select>
+                                <input type="number" id="flowerSub4" class="display-form">
+                            </label>
                         </fieldset> 
 
                         <!--Sands of Eon-->
@@ -497,7 +635,7 @@
                                 </select>
                             </label>
 
-                            <label>Value Main Stat:
+                            <label>Main Stat Value:
                                 <input type="number" id="clockValueStat" class="display-form">
                             </label>
 
@@ -511,6 +649,76 @@
                                     <option value="4*">4*</option>
                                     <option value="5*">5*</option>
                                 </select>
+                            </label>
+
+                            <!--Sub Stat-->
+                            <!--TODO: mettere un bottone ADD che fa apparire ogni volta una select per scegliere il tipo di stato e un campo input per inserire il valore?-->
+                            <label>Sub Stat-1:
+                                <select name="clockSubStat1" id="clockSubStat1" class="display-form">
+                                    <option value="HPsub1">HP</option>
+                                    <option value="HP%sub1">HP%</option>
+                                    <option value="ATKsub1">ATK</option>
+                                    <option value="ATK%sub1">ATK%</option>
+                                    <option value="DEFsub1">DEF</option>
+                                    <option value="DEF%sub1">DEF%</option>
+                                    <option value="elMasSub1">Elemental Master</option>
+                                    <option value="eneRechSub1">Energy Recharge</option>
+                                    <option value="critDmgSub1">CRIT DMG</option>
+                                    <option value="critRateSub1">CRIT Rate</option>
+                                    <option value="phyDMGSub1">Physical DMG</option>    
+                                </select>
+                                <input type="number" id="clockSub1" class="display-form">
+                            </label>
+
+                            <label>Sub Stat-2:
+                                <select name="clockSubStat2" id="clockSubStat2" class="display-form">
+                                    <option value="HPsub2">HP</option>
+                                    <option value="HP%sub2">HP%</option>
+                                    <option value="ATKsub2">ATK</option>
+                                    <option value="ATK%sub2">ATK%</option>
+                                    <option value="DEFsub2">DEF</option>
+                                    <option value="DEF%sub2">DEF%</option>
+                                    <option value="elMasSub2">Elemental Master</option>
+                                    <option value="eneRechSub2">Energy Recharge</option>
+                                    <option value="critDmgSub2">CRIT DMG</option>
+                                    <option value="critRateSub2">CRIT Rate</option>
+                                    <option value="phyDMGSub2">Physical DMG</option>    
+                                </select>
+                                <input type="number" id="clockSub2" class="display-form">
+                            </label>
+                            
+                            <label>Sub Stat-3:
+                                <select name="clockSubStat3" id="clockSubStat3" class="display-form">
+                                    <option value="HPsub3">HP</option>
+                                    <option value="HP%sub3">HP%</option>
+                                    <option value="ATKsub3">ATK</option>
+                                    <option value="ATK%sub3">ATK%</option>
+                                    <option value="DEFsub3">DEF</option>
+                                    <option value="DEF%sub3">DEF%</option>
+                                    <option value="elMasSub3">Elemental Master</option>
+                                    <option value="eneRechSub3">Energy Recharge</option>
+                                    <option value="critDmgSub3">CRIT DMG</option>
+                                    <option value="critRateSub3">CRIT Rate</option>
+                                    <option value="phyDMGSub3">Physical DMG</option>    
+                                </select>
+                                <input type="number" id="clockSub3" class="display-form">
+                            </label>
+
+                            <label>Sub Stat-4:
+                                <select name="clockSubStat4" id="clockSubStat4" class="display-form">
+                                    <option value="HPsub4">HP</option>
+                                    <option value="HP%sub4">HP%</option>
+                                    <option value="ATKsub4">ATK</option>
+                                    <option value="ATK%sub4">ATK%</option>
+                                    <option value="DEFsub4">DEF</option>
+                                    <option value="DEF%sub4">DEF%</option>
+                                    <option value="elMasSub4">Elemental Master</option>
+                                    <option value="eneRechSub4">Energy Recharge</option>
+                                    <option value="critDmgSub4">CRIT DMG</option>
+                                    <option value="critRateSub4">CRIT Rate</option>
+                                    <option value="phyDMGSub4">Physical DMG</option>    
+                                </select>
+                                <input type="number" id="clockSub4" class="display-form">
                             </label>
                         </fieldset> 
 
@@ -585,7 +793,7 @@
                                 </select>
                             </label>
 
-                            <label>Value Main Stat:
+                            <label>Main Stat Value:
                                 <input type="number" id="gobletValueStat" class="display-form">
                             </label>
 
@@ -600,6 +808,76 @@
                                     <option value="5*">5*</option>
                                 </select>
                             </label> 
+
+                            <!--Sub Stat-->
+                            <!--TODO: mettere un bottone ADD che fa apparire ogni volta una select per scegliere il tipo di stato e un campo input per inserire il valore?-->
+                            <label>Sub Stat-1:
+                                <select name="gobletSubStat1" id="gobletSubStat1" class="display-form">
+                                    <option value="HPsub1">HP</option>
+                                    <option value="HP%sub1">HP%</option>
+                                    <option value="ATKsub1">ATK</option>
+                                    <option value="ATK%sub1">ATK%</option>
+                                    <option value="DEFsub1">DEF</option>
+                                    <option value="DEF%sub1">DEF%</option>
+                                    <option value="elMasSub1">Elemental Master</option>
+                                    <option value="eneRechSub1">Energy Recharge</option>
+                                    <option value="critDmgSub1">CRIT DMG</option>
+                                    <option value="critRateSub1">CRIT Rate</option>
+                                    <option value="phyDMGSub1">Physical DMG</option>    
+                                </select>
+                                <input type="number" id="gobletSub1" class="display-form">
+                            </label>
+
+                            <label>Sub Stat-2:
+                                <select name="gobletSubStat2" id="gobletSubStat2" class="display-form">
+                                    <option value="HPsub2">HP</option>
+                                    <option value="HP%sub2">HP%</option>
+                                    <option value="ATKsub2">ATK</option>
+                                    <option value="ATK%sub2">ATK%</option>
+                                    <option value="DEFsub2">DEF</option>
+                                    <option value="DEF%sub2">DEF%</option>
+                                    <option value="elMasSub2">Elemental Master</option>
+                                    <option value="eneRechSub2">Energy Recharge</option>
+                                    <option value="critDmgSub2">CRIT DMG</option>
+                                    <option value="critRateSub2">CRIT Rate</option>
+                                    <option value="phyDMGSub2">Physical DMG</option>    
+                                </select>
+                                <input type="number" id="gobletSub2" class="display-form">
+                            </label>
+                            
+                            <label>Sub Stat-3:
+                                <select name="gobletSubStat3" id="gobletSubStat3" class="display-form">
+                                    <option value="HPsub3">HP</option>
+                                    <option value="HP%sub3">HP%</option>
+                                    <option value="ATKsub3">ATK</option>
+                                    <option value="ATK%sub3">ATK%</option>
+                                    <option value="DEFsub3">DEF</option>
+                                    <option value="DEF%sub3">DEF%</option>
+                                    <option value="elMasSub3">Elemental Master</option>
+                                    <option value="eneRechSub3">Energy Recharge</option>
+                                    <option value="critDmgSub3">CRIT DMG</option>
+                                    <option value="critRateSub3">CRIT Rate</option>
+                                    <option value="phyDMGSub3">Physical DMG</option>    
+                                </select>
+                                <input type="number" id="gobletSub3" class="display-form">
+                            </label>
+
+                            <label>Sub Stat-4:
+                                <select name="gobletSubStat4" id="gobletSubStat4" class="display-form">
+                                    <option value="HPsub4">HP</option>
+                                    <option value="HP%sub4">HP%</option>
+                                    <option value="ATKsub4">ATK</option>
+                                    <option value="ATK%sub4">ATK%</option>
+                                    <option value="DEFsub4">DEF</option>
+                                    <option value="DEF%sub4">DEF%</option>
+                                    <option value="elMasSub4">Elemental Master</option>
+                                    <option value="eneRechSub4">Energy Recharge</option>
+                                    <option value="critDmgSub4">CRIT DMG</option>
+                                    <option value="critRateSub4">CRIT Rate</option>
+                                    <option value="phyDMGSub4">Physical DMG</option>    
+                                </select>
+                                <input type="number" id="gobletSub4" class="display-form">
+                            </label>
                         </fieldset> 
 
                         <!--Circlet of Logos-->
@@ -674,7 +952,7 @@
                                 </select>
                             </label>
 
-                            <label>Value Main Stat:
+                            <label>Main Stat Value:
                                 <input type="number" id="crownValueStat" class="display-form">
                             </label>
 
@@ -689,6 +967,76 @@
                                     <option value="5*">5*</option>
                                 </select>
                             </label> 
+
+                            <!--Sub Stat-->
+                            <!--TODO: mettere un bottone ADD che fa apparire ogni volta una select per scegliere il tipo di stato e un campo input per inserire il valore?-->
+                            <label>Sub Stat-1:
+                                <select name="crownSubStat1" id="crownSubStat1" class="display-form">
+                                    <option value="HPsub1">HP</option>
+                                    <option value="HP%sub1">HP%</option>
+                                    <option value="ATKsub1">ATK</option>
+                                    <option value="ATK%sub1">ATK%</option>
+                                    <option value="DEFsub1">DEF</option>
+                                    <option value="DEF%sub1">DEF%</option>
+                                    <option value="elMasSub1">Elemental Master</option>
+                                    <option value="eneRechSub1">Energy Recharge</option>
+                                    <option value="critDmgSub1">CRIT DMG</option>
+                                    <option value="critRateSub1">CRIT Rate</option>
+                                    <option value="phyDMGSub1">Physical DMG</option>    
+                                </select>
+                                <input type="number" id="crownSub1" class="display-form">
+                            </label>
+
+                            <label>Sub Stat-2:
+                                <select name="crownSubStat2" id="crownSubStat2" class="display-form">
+                                    <option value="HPsub2">HP</option>
+                                    <option value="HP%sub2">HP%</option>
+                                    <option value="ATKsub2">ATK</option>
+                                    <option value="ATK%sub2">ATK%</option>
+                                    <option value="DEFsub2">DEF</option>
+                                    <option value="DEF%sub2">DEF%</option>
+                                    <option value="elMasSub2">Elemental Master</option>
+                                    <option value="eneRechSub2">Energy Recharge</option>
+                                    <option value="critDmgSub2">CRIT DMG</option>
+                                    <option value="critRateSub2">CRIT Rate</option>
+                                    <option value="phyDMGSub2">Physical DMG</option>    
+                                </select>
+                                <input type="number" id="crownSub2" class="display-form">
+                            </label>
+                            
+                            <label>Sub Stat-3:
+                                <select name="crownSubStat3" id="crownSubStat3" class="display-form">
+                                    <option value="HPsub3">HP</option>
+                                    <option value="HP%sub3">HP%</option>
+                                    <option value="ATKsub3">ATK</option>
+                                    <option value="ATK%sub3">ATK%</option>
+                                    <option value="DEFsub3">DEF</option>
+                                    <option value="DEF%sub3">DEF%</option>
+                                    <option value="elMasSub3">Elemental Master</option>
+                                    <option value="eneRechSub3">Energy Recharge</option>
+                                    <option value="critDmgSub3">CRIT DMG</option>
+                                    <option value="critRateSub3">CRIT Rate</option>
+                                    <option value="phyDMGSub3">Physical DMG</option>    
+                                </select>
+                                <input type="number" id="crownSub3" class="display-form">
+                            </label>
+
+                            <label>Sub Stat-4:
+                                <select name="crownSubStat4" id="crownSubStat4" class="display-form">
+                                    <option value="HPsub4">HP</option>
+                                    <option value="HP%sub4">HP%</option>
+                                    <option value="ATKsub4">ATK</option>
+                                    <option value="ATK%sub4">ATK%</option>
+                                    <option value="DEFsub4">DEF</option>
+                                    <option value="DEF%sub4">DEF%</option>
+                                    <option value="elMasSub4">Elemental Master</option>
+                                    <option value="eneRechSub4">Energy Recharge</option>
+                                    <option value="critDmgSub4">CRIT DMG</option>
+                                    <option value="critRateSub4">CRIT Rate</option>
+                                    <option value="phyDMGSub4">Physical DMG</option>    
+                                </select>
+                                <input type="number" id="crownSub4" class="display-form">
+                            </label>
                         </fieldset> 
 
                         <!--Set Bonus-->
