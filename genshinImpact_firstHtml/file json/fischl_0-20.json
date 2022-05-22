@@ -12,7 +12,7 @@
         "incomingHealing": 0.0,
         "energyRecharge": 100.0,
         "cdReduction": 0.0,
-        "shiedlsStrenght": 0.0
+        "shieldsStrenght": 0.0
     },
     "elementalType": {
         "pyroDmg": 0.0,
