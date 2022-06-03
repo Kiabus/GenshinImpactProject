@@ -32,7 +32,7 @@ function myFunction(){
         document.getElementById("elGeoRes").innerHTML = 0.0;
         document.getElementById("elPhysicalDMG").innerHTML = 0.0;
         document.getElementById("elPhysicalRes").innerHTML = 0.0;
-        document.getElementById("elImg").style.display='inline-block';
+        document.getElementById("elImg").style.display='inline';
     }
 }
 
