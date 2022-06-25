@@ -33,6 +33,38 @@ function myFunction(){
         document.getElementById("elPhysicalDMG").innerHTML = 0.0;
         document.getElementById("elPhysicalRes").innerHTML = 0.0;
         document.getElementById("elImg").style.display='inline';
+        //weapon
+        document.getElementById("nameWeapon").innerHTML = "Hunter's Bow";
+        document.getElementById("atkWeapon0").innerHTML = 23;
+        document.getElementById("atkWeapon02").innerHTML = 56;
+        document.getElementById("atkWeapon1").innerHTML = 68;
+        document.getElementById("atkWeapon12").innerHTML = 102;
+        document.getElementById("atkWeapon2").innerHTML = 113;
+        document.getElementById("atkWeapon22").innerHTML = 130;
+        document.getElementById("atkWeapon3").innerHTML = 141;
+        document.getElementById("atkWeapon32").innerHTML = 158;
+        document.getElementById("atkWeapon4").innerHTML = 169;
+        document.getElementById("atkWeapon42").innerHTML = 185;
+        //constellation
+        document.getElementById("nameC1").innerHTML = "Gaze of the Deep";
+        document.getElementById("nameC2").innerHTML = "Devourer of All Sins";
+        document.getElementById("nameC3").innerHTML = "Wings of Nightmare";
+        document.getElementById("nameC4").innerHTML = "Her Pilgrimage of Bleak";
+        document.getElementById("nameC5").innerHTML = "Against the Fleeing Light";
+        document.getElementById("nameC6").innerHTML = "Evernight Raven";
+        //talents
+        document.getElementById("normAtk").innerHTML = "Bolts of Downfall";
+        document.getElementById("hit1").innerHTML = 44.12;
+        document.getElementById("hit2").innerHTML = 46.78;
+        document.getElementById("hit3").innerHTML = 58.14;
+        document.getElementById("hit4").innerHTML = 57.71;
+        document.getElementById("hit5").innerHTML = 72.07;
+        document.getElementById("plungeDMG").innerHTML = 56.83;
+        document.getElementById("lPlungeDMG").innerHTML = 113.63;
+        document.getElementById("hPlungeDMG").innerHTML = 141.93;
+        document.getElementById("aimedShot").innerHTML = 43.86;
+        document.getElementById("fullyCharged").innerHTML = 124;
+
     }
 }
 
