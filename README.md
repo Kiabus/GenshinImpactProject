@@ -29,3 +29,5 @@ EXPRESS GRAPHQL SERVER (for create a local GraphQL server)
 Install Express GraphQL and Nodemon: run into the terminal *npm i express express-graphql graphql* and *npm i --save-dev nodemon* 
 
 Start NodeJS with *npm run devStart*
+
+URL: http://localhost:5000/graphql?
