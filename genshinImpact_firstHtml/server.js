@@ -51,10 +51,10 @@ const WeaponType = new GraphQLObjectType({
     fields: () => ({
         id: {type: new GraphQLNonNull(GraphQLInt)},
         name: {type: new GraphQLNonNull(GraphQLString)},
-        characters: {
+        character: {
             type: new GraphQLList(CharType),
-            resolve: () => {
-                return characters.filter(character => character.weaponId === weapon.id)
+            resolve: (weapon) => {
+            return characters.filter(character => character.weaponId === weapon.id)
             }
         }  
     })
@@ -65,12 +65,28 @@ const RootQueryType = new GraphQLObjectType({
     name: 'Query',
     description: 'Root Query',
     fields: () => ({
-        characters: {
+        character: { //one character
+            type: CharType,
+            description: 'A character of Genshin Impact',
+            args: {
+                id: { type: GraphQLInt }
+            },
+            resolve: (parent, args) => characters.find(character => character.id === args.id)
+        },
+        characters: { //all characters
             type: new GraphQLList(CharType),
             description: 'List of All Genshin Characters',
             resolve: () => characters
         },
-        weapons: {
+        weapon: { //one weapon
+            type: WeaponType,
+            description: 'A weapon of Genshin Impact',
+            args: {
+                id: { type: GraphQLInt }
+            },
+            resolve: (parent, args) => weapons.find(weapon => weapon.id === args.id)
+        },
+        weapons: { //all weapons
             type: new GraphQLList(WeaponType),
             description: 'List of All Genshin Weapons',
             resolve: () => weapons
@@ -78,9 +94,43 @@ const RootQueryType = new GraphQLObjectType({
     })
 })
 
-//fa funzionare le query su GraphQl
+//mutation
+const RootMutationType = new GraphQLObjectType({
+    name: 'Mutation',
+    description: 'Root Mutation',
+    fields: () => ({
+        addCharacter: {
+            type: CharType,
+            description: 'Add a character',
+            args: {
+                name: { type: new GraphQLNonNull(GraphQLString) },
+                weaponId: { type: new GraphQLNonNull(GraphQLInt) }
+            },
+            resolve: (parent, args) => { //creo il character
+                const character = { id: characters.lenght + 1, name: args.name, weaponId: args.weaponId }
+                characters.push(character)
+                return character
+            }
+        },
+        addWeapon: {
+            type: WeaponType,
+            description: 'Add a weapon',
+            args: {
+                name: { type: new GraphQLNonNull(GraphQLString) }
+            },
+            resolve: (parent, args) => { //creo il character
+                const weapon = { id: weapons.lenght + 1, name: args.name }
+                weapons.push(weapon)
+                return weapon
+            }
+        }
+    })
+})
+
+//schema di GraphQl, raggruppa le query e le mutation
 const schema = new GraphQLSchema({
-    query: RootQueryType
+    query: RootQueryType,
+    mutation: RootMutationType
 })
 
 //localhost:5000/graphql?
