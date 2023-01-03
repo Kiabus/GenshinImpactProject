@@ -12,14 +12,14 @@ app.get('/', (req, resp) => {
     resp.send('Welcome to Genshin API')
 })
 
-app.get('/api/characters', (req, resp) => {
+app.get('/genshin/characters', (req, resp) => {
     database.collection('characters').find({}).toArray((err, result) => {
         if(err) throw err
         resp.send(result)
     })
 })
 
-app.get('/api/characters/Fischl', (req, resp) => {
+app.get('/genshin/characters/Fischl', (req, resp) => {
     database.collection('characters').find({name: "Fischl"}).toArray((err, result) => {
         if(err) throw err
         resp.send(result)
@@ -27,14 +27,14 @@ app.get('/api/characters/Fischl', (req, resp) => {
 
 })
 
-app.get('/api/weapons', (req, resp) => {
+app.get('/genshin/weapons', (req, resp) => {
     database.collection('weapons').find({}).toArray((err, result) => {
         if(err) throw err
         resp.send(result)
     })
 })
 
-app.get('/api/weapons/HuntersBow', (req, resp) => {
+app.get('/genshin/weapons/HuntersBow', (req, resp) => {
     database.collection('weapons').find({name: "Hunter's Bow"}).toArray((err, result) => {
         if(err) throw err
         resp.send(result)
