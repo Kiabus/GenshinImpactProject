@@ -29,6 +29,5 @@ Start NodeJS project: into the terminal, write *npm run start* or *npm run dev*
 GENSHIN API
 
 It is possible call by Postman the Genshin API.
-For more info, see the mongodb.js file
 
 
