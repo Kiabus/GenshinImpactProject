@@ -20,7 +20,7 @@ app.get('/genshin/characters', (req, resp) => {
 })
 
 app.get('/genshin/characters/charName', (req, resp) => {
-    database.collection('characters').find({name: "Fischl"}).toArray((err, result) => {
+    database.collection('characters').find({name: "Fisch"}).toArray((err, result) => {
         if(err) throw err
         resp.send(result)
     })
@@ -35,14 +35,14 @@ app.get('/genshin/weapons', (req, resp) => {
 })
 
 app.get('/genshin/weapons/weapName', (req, resp) => {
-    database.collection('weapons').find({name: "Hunter's Bow"}).toArray((err, result) => {
+    database.collection('weapons').find({name: "Hunter Bow"}).toArray((err, result) => {
         if(err) throw err
         resp.send(result)
     })
 })
 
 //mongodb connection
-app.listen(8080, () => {
+app.listen(port, () => {
     MongoClient.connect(DBUrl, {useNewUrlParser: true}, (error, result) =>{
         if(error) throw error
         database = result.db('genshin')
