@@ -1,5 +1,5 @@
 const express = require('express')
-const DBUrl = "mongodb+srv://kiabus:LoScr1c1o@genshinimpact.jxjnt.mongodb.net/?retryWrites=true&w=majority";
+const DBUrl = "yourMongoURL";
 const MongoClient = require('mongodb').MongoClient
 const app = express()
 
