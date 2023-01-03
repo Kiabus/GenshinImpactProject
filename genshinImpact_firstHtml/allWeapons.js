@@ -1,4 +1,4 @@
-fetch("http://localhost:8080/api/weapons").then((data)=>{
+fetch("http://localhost:8080/genshin/weapons").then((data)=>{
     //console.log(data);
     return data.json(); //converted to object
 }).then((objectData) =>{
