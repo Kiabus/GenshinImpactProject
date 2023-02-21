@@ -1,4 +1,4 @@
-fetch("http://localhost:8080/api/characters/Fischl").then((data)=>{
+fetch("http://localhost:port/genshin/characters/Fischl").then((data)=>{
     //console.log(data);
     return data.json(); //converted to object
 }).then((objectData) =>{
