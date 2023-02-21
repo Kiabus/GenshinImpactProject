@@ -11,7 +11,7 @@
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="#">Genshin Impact</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -19,10 +19,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="home.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="characters.html">Characters</a>
+                        <a class="nav-link active" aria-current="page" href="#">Characters</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="weapons.html">Weapons</a>
@@ -39,22 +39,38 @@
     <p class="text-center">Characters data</p>
 
     <div class="container">
-        <h5>Attributes</h5>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">Name</th>
-                    <th scope="col">Base HP</th>
-                    <th scope="col">Base ATK</th>
-                    <th scope="col">Base DEF</th>
-                    <th scope="col">Elemental Mastery</th>
-                    <th scope="col">Max Stamina</th>
-                </tr>
-            </thead>
-            <tbody class="table-group-divider" id="table-char">
+    
+        <!--Fischl Card-->
+        <div class="card text-bg-info mb-3" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Fischl</h5>
+                <h6 class="card-subtitle mb-2 text-muted">von Luftschloss Narfidort</h6>
+                <p class="card-text">She is an investigator for Mondstadt's Adventurers' Guild, accompanied by the night raven Oz. 
+                    A daring adventurer with seemingly outlandish theories that happen to turn out to be true, 
+                    she claims to hail from a world beyond Teyvat.</p>
+                <a href="characters/Fischl/fischlAttributes.html" class="card-link">Attributes</a>
+                <a href="#" class="card-link">Weapon</a><br>
+                <a href="#" class="card-link">Artifacts</a>
+                <a href="#" class="card-link">Constellations</a><br>
+                <a href="#" class="card-link">Talents</a>
+            </div>
+        </div>
 
-            </tbody>
-        </table>
+        <!--Sara Card-->
+        <div class="card text-bg-info mb-3" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Sara</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Kujou</h6>
+                <p class="card-text">A tengu, Sara is the adopted daughter of the Kujou Clan of the Tenryou Commission. 
+                    Loyal to both her clan and the Shogun, Sara carries out her orders by the Shogun's will.</p>
+                <a href="characters/Sara/saraAttributes.html" class="card-link">Attributes</a>
+                <a href="#" class="card-link">Weapon</a><br>
+                <a href="#" class="card-link">Artifacts</a>
+                <a href="#" class="card-link">Constellations</a><br>
+                <a href="#" class="card-link">Talents</a>
+            </div>
+        </div>
+
     </div>
 
     <script src="allCharacters.js"></script>

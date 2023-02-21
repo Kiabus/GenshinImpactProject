@@ -8,7 +8,6 @@
 </head>
 
 <body>
-
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Genshin Impact</a>
@@ -19,13 +18,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                        <a class="nav-link active" aria-current="page" href="/home.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="characters.html">Characters</a>
+                        <a class="nav-link active" aria-current="page" href="#">Characters</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Weapons</a>
+                        <a class="nav-link" href="weapons.html">Weapons</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Artifacts</a>
@@ -35,25 +34,25 @@
         </div>
     </nav>
 
-    <h1 class="text-center">Welcome!</h1>
-    <p class="text-center">Weapons data</p>
-
     <div class="container">
-        <h5>Weapons</h5>
+        <h5>Attributes</h5>
         <table class="table">
             <thead>
                 <tr>
                     <th scope="col">Name</th>
-                    <th scope="col">Type</th>
+                    <th scope="col">Base HP</th>
+                    <th scope="col">Base ATK</th>
+                    <th scope="col">Base DEF</th>
+                    <th scope="col">Elemental Mastery</th>
+                    <th scope="col">Max Stamina</th>
                 </tr>
             </thead>
-            <tbody class="table-group-divider" id="table-weap">
+            <tbody class="table-group-divider" id="table-char">
 
             </tbody>
         </table>
     </div>
 
-    <script src="allWeapons.js"></script>
+    <script src="saraAttributes.js"></script>
 </body>
-
 </html>
