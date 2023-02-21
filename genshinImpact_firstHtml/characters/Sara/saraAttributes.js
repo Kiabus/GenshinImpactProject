@@ -1,4 +1,4 @@
-fetch("http://localhost:8080/api/characters/KujouSara").then((data)=>{
+fetch("http://localhost:port/genshin/characters/KujouSara").then((data)=>{
     //console.log(data);
     return data.json(); //converted to object
 }).then((objectData) =>{
