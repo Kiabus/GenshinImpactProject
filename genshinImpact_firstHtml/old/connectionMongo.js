@@ -1,6 +1,6 @@
 const { cursorTo } = require("readline");
 
-const DBUrl = "mongodb+srv://kiabus:LoScr1c1o@genshinimpact.jxjnt.mongodb.net/?retryWrites=true&w=majority";
+const DBUrl = "yourMongoDbURL";
 
 const MongoClient = require("mongodb").MongoClient;
 
@@ -24,11 +24,8 @@ mongodb.connect(function(err){
 
     //insert a record
     /*weapons.insertOne({name: "Messenger"})
-
     //insert an object
     characters.insertOne({advancedStats: {critRate: 5.0}});
-
     //insert more records
     weapons.insertMany([{name: "The Catch"}, {name: "Predator"}])*/
 });
-
