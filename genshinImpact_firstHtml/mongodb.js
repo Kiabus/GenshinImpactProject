@@ -19,8 +19,18 @@ app.get('/genshin/characters', (req, resp) => {
     })
 })
 
+//Fischl
 app.get('/genshin/characters/charName', (req, resp) => {
     database.collection('characters').find({name: "Fisch"}).toArray((err, result) => {
+        if(err) throw err
+        resp.send(result)
+    })
+
+})
+
+//Sara
+app.get('/genshin/characters/charName', (req, resp) => {
+    database.collection('characters').find({name: "Kujou Sara"}).toArray((err, result) => {
         if(err) throw err
         resp.send(result)
     })
@@ -34,8 +44,8 @@ app.get('/genshin/weapons', (req, resp) => {
     })
 })
 
-app.get('/genshin/weapons/weapName', (req, resp) => {
-    database.collection('weapons').find({name: "Hunter Bow"}).toArray((err, result) => {
+app.get('/genshin/weapons/weaName', (req, resp) => {
+    database.collection('weapons').find({name: "Messenger"}).toArray((err, result) => {
         if(err) throw err
         resp.send(result)
     })
