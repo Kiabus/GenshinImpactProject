@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Genshin Impact</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="img/favicon-16x16.png" />
+</head>
+
+<body>
+    <app-root>
+        <!--header-->
+        <div class="header">
+            <div class="navbar">
+                <div class="navbar-menu">
+                    <img src="img/genshin_logo.jpg" class="logo-style">
+                    <a href="page1.html" class="a-style">Fast Build</a>
+                    <a href="page2.html" class="a-style">Low Build</a>
+                    <a href="#" class="active">My Archive</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container body-image">
+            <div class="body-container-0">
+                <p class="paragraph-style">
+                    In this section you can retrieve a character base statistics by his name and his level/ascension that you have saved in the Low Build section.
+                </p>  
+            </div>
+
+            <div class="body-container-1">
+                <!--form-->
+                <form>
+                    <fieldset class="fieldset-style">
+                        <legend>Character</legend>
+
+                        <label>Name:
+                            <input type="text" id="nameChar" class="display-form">
+                        </label><br>
+                        <input type="button" value="Load!" onclick="myFunction()">
+                    </fieldset>
+                </form>
+            </div>
+            <div class="body-container-2">
+            </div>
+        </div>
+    </app-root>
+</body>
+
+</html>

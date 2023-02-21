@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Genshin Impact</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="img/favicon-16x16.png" />
+</head>
+
+<body>
+    <app-root>
+        <!--header-->
+        <div class="header">
+            <div class="navbar">
+                <div class="navbar-menu">
+                    <img src="img/genshin_logo.jpg" class="logo-style">
+                    <a href="#" class="active">Fast Build</a>
+                    <a href="page2.html" class="a-style">Low Build</a>
+                    <a href="page3.html" class="a-style">My Archive</a>
+                </div>
+            </div>  
+        </div>
+
+        <div class="container body-image">
+            <div class="body-container-0">
+                <p class="paragraph-style">In this section you can consult a character base statistics by his name and his level/ascension.</p>  
+            </div>
+
+            <div class="body-container-1">
+                <!--form-->
+                <form>
+                    <fieldset class="fieldset-style">
+                        <legend>Character</legend>
+
+                        <label>Name:
+                            <input type="text" id="nameChar" class="display-form">
+                        </label>
+                        
+                        <label>Level:
+                            <select name="level" id="levelChar" class="display-form">
+                                <option value="0/20">0/20 (Ascension 0)</option>
+                                <option value="20/20">20/20 (Ascension 0)</option>
+                                <option value="20/40">20/40 (Ascension 1)</option>
+                                <option value="40/40">40/40 (Ascension 1)</option>
+                                <option value="40/50">40/50 (Ascension 2)</option>
+                                <option value="50/50">50/50 (Ascension 2)</option>
+                                <option value="50/60">50/60 (Ascension 3)</option>
+                                <option value="60/60">60/60 (Ascension 3)</option>
+                                <option value="60/70">60/70 (Ascension 4)</option>
+                                <option value="70/70">70/70 (Ascension 4)</option>
+                                <option value="70/80">70/80 (Ascension 5)</option>
+                                <option value="80/80">80/80 (Ascension 5)</option>
+                                <option value="80/90">80/90 (Ascension 6)</option>
+                                <option value="90/90">90/90 (Ascension 6)</option>
+                            </select>
+                        </label><br>
+                        <input type="button" value="Load" onclick="myFunction()">
+                    </fieldset>
+                
+            
+            
+                    <!--results-->
+                    <!--Character attributes-->
+                    <fieldset class="fieldset-style fieldset-position">
+                        <legend>Attributes</legend>
+                            <ul class="character-list">
+                                <li>Name: <span id="elName"></span></li>
+                                <li>Weapon Type: <span id="weaponType"></span></li>
+                                <li>Base HP: <span id="elHP"></span></li>
+                                <li>Base ATK: <span id="elAtk"></span></li>
+                                <li>Base DEF: <span id="elDef"></span></li>
+                                <li>Elemental Master: <span id="elMaster"></span></li>
+                                <li>Max Stamina: <span id="elStamina"></span></li>  
+                                    <ul>
+                                        <li>Crit Rate%: <span id="elCritRate"></span></li>
+                                        <li>Crit Dmg%: <span id="elCritDmg"></span></li>
+                                        <li>Healing Bonus%: <span id="elHealBonus"></span></li>
+                                        <li>Incoming Healing%: <span id="elInHeal"></span></li>
+                                        <li>Energy Recharge%: <span id="elEnerRech"></span></li>
+                                        <li>CD Reduction%: <span id="elCDRed"></span></li>
+                                        <li>Shield Strenght%: <span id="elShieldStrenght"></span></li>
+                                    </ul>   
+                            </ul>
+                            
+                            <ul class="character-list">
+                                <li>Pyro DMG%: <span id="elPyroDMG"></span></li>
+                                <li>Pyro Res%: <span id="elPyroRes"></span></li>
+                                <li>Hydro DMG%: <span id="elHydroDMG"></span></li>
+                                <li>Hydro Res%: <span id="elHydroRes"></span></li>   
+                                <li>Dendro DMG%: <span id="elDendroDMG"></span></li>
+                                <li>Dendro Res%: <span id="elDendroRes"></span></li>
+                                <li>Cryo DMG%: <span id="elCryoDMG"></span></li>
+                                <li>Cryo Res%: <span id="elCryoRes"></span></li> 
+                                <li>Electro DMG%: <span id="elElectroDMG"></span></li>
+                                <li>Electro Res%: <span id="elElectroRes"></span></li>
+                                <li>Anemo DMG%: <span id="elAnemoDMG"></span></li>
+                                <li>Anemo Res%: <span id="elAnemoRes"></span></li>   
+                                <li>Geo DMG%: <span id="elGeoDMG"></span></li>
+                                <li>Geo Res%: <span id="elGeoRes"></span></li>
+                                <li>Physical DMG%: <span id="elPhysicalDMG"></span></li>
+                                <li>Physical Res%: <span id="elPhysicalRes"></span></li>
+                            </ul>      
+                    </fieldset>
+
+                    <!--Character weapon-->
+                    <fieldset class="fieldset-style fieldset-position">
+                        <legend>Weapon</legend>
+                            <ul class="character-list">
+                                <li>Name: <span id="nameWeapon"></span></li>
+                                <li>Level/Ascension: 0/20 (Ascension 0)</li>
+                                <li>Base ATK: <span id="atkWeapon0"></span></li>
+                                <li>Level/Ascension: 20/20 (Ascension 0)</li>
+                                <li>Base ATK: <span id="atkWeapon02"></span></li>
+                                <li>Level/Ascension: 20/40 (Ascension 1)</li>
+                                <li>Base ATK: <span id="atkWeapon1"></span></li>
+                                <li>Level/Ascension: 40/40 (Ascension 1)</li>
+                                <li>Base ATK: <span id="atkWeapon12"></span></li>
+                                <li>Level/Ascension: 40/50 (Ascension 2)</li>
+                                <li>Base ATK: <span id="atkWeapon2"></span></li>
+                                <li>Level/Ascension: 50/50 (Ascension 2)</li>
+                                <li>Base ATK: <span id="atkWeapon22"></span></li>
+                                <li>Level/Ascension: 50/60 (Ascension 3)</li>
+                                <li>Base ATK: <span id="atkWeapon3"></span></li>
+                                <li>Level/Ascension: 60/60 (Ascension 3)</li>
+                                <li>Base ATK: <span id="atkWeapon32"></span></li>
+                                <li>Level/Ascension: 60/70 (Ascension 4)</li>
+                                <li>Base ATK: <span id="atkWeapon4"></span></li>
+                                <li>Level/Ascension: 70/70 (Ascension 4)</li>
+                                <li>Base ATK: <span id="atkWeapon42"></span></li>
+                            </ul>   
+                    </fieldset>
+
+                    <!--Character constellation-->
+                    <!--TODO: inserire un tooltip con descrizione?-->
+                    <fieldset class="fieldset-style fieldset-position">
+                        <legend>Constellation</legend>
+                            <ul class="character-list">
+                                <li>Name C1: <span id="nameC1"></span></li>
+                                <li>Name C2: <span id="nameC2"></span></li>
+                                <li>Name C3: <span id="nameC3"></span></li>
+                                <li>Name C4: <span id="nameC4"></span></li>
+                                <li>Name C5: <span id="nameC5"></span></li>
+                                <li>Name C6: <span id="nameC6"></span></li>
+                            </ul>   
+                    </fieldset>
+
+                    <!--Character talents-->
+                    <!--in base al tipo di arma, cambiano le voci delle statistiche-->
+                    <fieldset class="fieldset-style fieldset-position">
+                        <legend>Talents</legend>
+
+                        <!--Normal Attack-->
+                        <details class="accordion">
+                            <summary class="accordion-header">
+                                Normal Attack: <span id="normAtk"></span>
+                            </summary>
+                                <ul class="character-list">
+                                    <li>1-Hit DMG: <span id="hit1"></span></li>
+                                    <li>2-Hit DMG: <span id="hit2"></span></li>
+                                    <li>3-Hit DMG: <span id="hit3"></span></li>
+                                    <li>4-Hit DMG: <span id="hit4"></span></li>
+                                    <li>5-Hit DMG: <span id="hit5"></span></li>
+                                    <li>Plunge DMG: <span id="plungeDMG"></span></li>
+                                    <li>Low Plunge DMG: <span id="lPlungeDMG"></span></li>
+                                    <li>High Plunge DMG: <span id="hPlungeDMG"></span></li>
+                                    <!--TODO: a seconda dell'arma, escono voci differenti, magari creare un if?-->
+                                    <!--Bow-->
+                                    <details class="accordion">
+                                        <summary class="accordion-header">
+                                            Bow: 
+                                        </summary>
+                                        <ul>
+                                            <li>Aimed Shot: <span id="aimedShot"></span></li>
+                                            <li>Fully-Charged Aimed Shot: <span id="fullyCharged"></span></li>
+                                        </ul>
+                                    </details>
+
+                                    <!--Catalyst-->
+                                    <details class="accordion">
+                                        <summary class="accordion-header">
+                                            Catalyst: <span id="catalystTalent"></span>
+                                        </summary>
+                                        <ul>
+                                            <li>Charged Attack DMG: <span id="chAtkDMGCata"></span></li>
+                                            <li>Charged Attack Stamina Cost: <span id="chAtkStaminaCata"></span></li>
+                                        </ul>
+                                    </details>
+
+                                    <!--Claymore-->
+                                    <details class="accordion">
+                                        <summary class="accordion-header">
+                                            Claymore: <span id="claymoreTalent"></span>
+                                        </summary>
+                                        <ul>
+                                            <li>Charged Attack Spinning DMG: <span id="chAtkSpinning"></span></li>
+                                            <li>Charged Attack Final DMG: <span id="chAtkFinal"></span></li>
+                                            <li>Charged Attack Stamina Cost: <span id="chAtkStaminaClay"></span></li>
+                                            <li>Max Duration: <span id="maxDuration"></span></li>
+                                        </ul>
+                                    </details>
+
+                                    <!--Polearm-->
+                                    <details class="accordion">
+                                        <summary class="accordion-header">
+                                            Polearm: <span id="polearmTalent"></span>
+                                        </summary>
+                                        <ul>
+                                            <li>Charged Attack DMG: <span id="chAtkDMGPole"></span></li>
+                                            <li>Charged Attack Stamina Cost: <span id="chAtkStaminaPole"></span></li>
+                                        </ul>
+                                    </details>
+
+                                    <!--Sword-->
+                                    <details class="accordion">
+                                        <summary class="accordion-header">
+                                            Sword: <span id="SwordTalent"></span>
+                                        </summary>
+                                        <ul>
+                                            <li>Charged Attack DMG: <span id="chAtkDMGSword"></span></li>
+                                            <li>Charged Attack Stamina Cost: <span id="chAtkStaminaSword"></span></li>
+                                        </ul>
+                                    </details>
+                                </ul>   
+                        </details>
+
+                        <!--cambiano in base ai personaggi!-->
+                        <!--Elemental Skill-->
+                        <details class="accordion">
+                            <summary class="accordion-header">
+                                Elemental Skill: <span id="elSkill"></span>
+                            </summary>
+                        </details>
+
+                        <!--Elemental Burst-->
+                        <details class="accordion">
+                            <summary class="accordion-header">
+                                Elemental Burst: <span id="elBurst"></span>
+                            </summary>
+                        </details>
+
+                        <!--1st Ascension Passive-->
+                        <details class="accordion">
+                            <summary class="accordion-header">
+                                1st Ascension Passive: <span id="1stAscePassive"></span>
+                            </summary>
+                        </details>
+
+                        <!--4th Ascension Passive-->
+                        <details class="accordion">
+                            <summary class="accordion-header">
+                                4th Ascension Passive: <span id="4thAscePassive"></span>
+                            </summary>
+                        </details>
+
+                        <!--Utility Passive-->
+                        <details class="accordion">
+                            <summary class="accordion-header">
+                                Utility Passive: <span id="utilPassive"></span>
+                            </summary>
+                        </details>
+                    </fieldset>
+                    <img src="img/fischl.webp" alt="fischl" id="elImg" class="character-img" style="display: none">
+                </form>
+            </div>
+        </div>
+    </app-root>
+
+    <script type="text/javascript" src="characters.js"></script>
+</body>
+
+</html>

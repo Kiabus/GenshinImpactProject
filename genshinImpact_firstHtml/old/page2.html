@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Genshin Impact</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="img/favicon-16x16.png" />
+</head>
+
+<body>
+    <app-root>
+        <!--header-->
+        <div class="header">
+            <div class="navbar">
+                <div class="navbar-menu">
+                    <img src="img/genshin_logo.jpg" class="logo-style">
+                    <a href="page1.html" class="a-style">Fast Build</a>
+                    <a href="#" class="active">Low Build</a>
+                    <a href="page3.html" class="a-style">My Archive</a>
+                </div>
+            </div>
+        </div>
+        <div class="container body-image">
+            <div class="body-container-0">
+                <p class="paragraph-style">
+                    In this section you can insert manually the statistics of your character and save it into the archive when you click the button "Save!".<br>
+                    Based on the weapon and the artifact you insert, the statistics will be updates when you click the button "Update!".<br>     
+                    You can save more than one editing of the same character.                           
+                </p>  
+            </div>
+
+            <div class="body-container-1">       
+                <!--form-->
+                <form>
+                    <!--Character name and level-->
+                    <fieldset class="fieldset-style">
+                        <legend>Character</legend>
+
+                        <label>Name:
+                            <input type="text" id="nameChar" class="display-form">
+                        </label>
+
+                        <label>Level:
+                            <select name="level" id="levelChar" class="display-form">
+                                <option value="0/20">0/20 (Ascension 0)</option>
+                                <option value="20/20">20/20 (Ascension 0)</option>
+                                <option value="20/40">20/40 (Ascension 1)</option>
+                                <option value="40/40">40/40 (Ascension 1)</option>
+                                <option value="40/50">40/50 (Ascension 2)</option>
+                                <option value="50/50">50/50 (Ascension 2)</option>
+                                <option value="50/60">50/60 (Ascension 3)</option>
+                                <option value="60/60">60/60 (Ascension 3)</option>
+                                <option value="60/70">60/70 (Ascension 4)</option>
+                                <option value="70/70">70/70 (Ascension 4)</option>
+                                <option value="70/80">70/80 (Ascension 5)</option>
+                                <option value="80/80">80/80 (Ascension 5)</option>
+                                <option value="80/90">80/90 (Ascension 6)</option>
+                                <option value="90/90">90/90 (Ascension 6)</option>
+                            </select>
+                        </label><br>
+                    </fieldset>
+
+                    <!--Character attributes-->
+                    <details class="accordion">
+                        <summary class="accordion-header">
+                            Attributes
+                        </summary>
+                        <fieldset class="fieldset-style fieldset-position">
+                            <legend>Base Stats</legend>
+
+                            <label>Max HP:
+                                <input type="number" id="maxHP" class="display-form">
+                            </label>
+
+                            <label>Atk:
+                                <input type="number" id="atk" class="display-form">
+                            </label>
+
+                            <label>Def:
+                                <input type="number" id="def" class="display-form">
+                            </label>
+
+                            <label>Elemental Master:
+                                <input type="number" id="elMas" class="display-form">
+                            </label>
+
+                            <label>Max Stamina:
+                                <input type="number" id="stamina" class="display-form">
+                            </label>
+                        </fieldset>
+                    
+                        <fieldset class="fieldset-style fieldset-position">
+                            <legend>Advanced Stats</legend>
+
+                            <label>Crit Rate%:
+                                <input type="number" id="critRate" class="display-form">
+                            </label>
+
+                            <label>Crit Dmg%:
+                                <input type="number" id="critDMG" class="display-form">
+                            </label>
+
+                            <label>Healing Bonus%:
+                                <input type="number" id="healBonus" class="display-form">
+                            </label>
+
+                            <label>Incoming Healing%:
+                                <input type="number" id="inHealing" class="display-form">
+                            </label>
+
+                            <label>Energy Recharge%:
+                                <input type="number" id="eneRech" class="display-form">
+                            </label>
+
+                            <label>CD Reduction%:
+                                <input type="number" id="cdRed" class="display-form">
+                            </label>
+
+                            <label>Shield Strenght%:
+                                <input type="number" id="shield" class="display-form">
+                            </label>
+
+                        </fieldset>
+
+                        <fieldset class="fieldset-style fieldset-position">
+                            <legend>Elemental Type</legend>
+
+                            <label>Pyro DMG%:
+                                <input type="text" id="pyroDMG" class="display-form">
+                            </label>
+
+                            <label>Pyro RES%:
+                                <input type="number" id="pyroRES" class="display-form">
+                            </label>
+
+                            <label>Hydro DMG%:
+                                <input type="number" id="hydroDMG" class="display-form">
+                            </label>
+
+                            <label>Hydro RES%:
+                                <input type="number" id="hydroRES" class="display-form">
+                            </label>
+
+                            <label>Dendro DMG%:
+                                <input type="number" id="denDMG" class="display-form">
+                            </label>
+
+                            <label>Dendro RES%:
+                                <input type="number" id="denRES" class="display-form">
+                            </label>
+
+                            <label>Cryo DMG%:
+                                <input type="number" id="cryoDMG" class="display-form">
+                            </label>
+
+                            <label>Cryo RES%:
+                                <input type="number" id="cryoRES" class="display-form">
+                            </label>
+                        </fieldset>
+
+                        <fieldset class="fieldset-style fieldset-position">
+                            <legend>Elemental Type</legend>
+
+                            <label>Electro DMG%:
+                                <input type="text" id="elecDMG" class="display-form">
+                            </label>
+
+                            <label>Electro RES%:
+                                <input type="number" id="elecRES" class="display-form">
+                            </label>
+
+                            <label>Anemo DMG%:
+                                <input type="number" id="aneDMG" class="display-form">
+                            </label>
+
+                            <label>Anemo RES%:
+                                <input type="number" id="AneRES" class="display-form">
+                            </label>
+
+                            <label>Geo DMG%:
+                                <input type="number" id="geoDMG" class="display-form">
+                            </label>
+
+                            <label>Geo RES%:
+                                <input type="number" id="geoRES" class="display-form">
+                            </label>
+
+                            <label>Physical DMG%:
+                                <input type="number" id="phyDMG" class="display-form">
+                            </label>
+
+                            <label>Physical RES%:
+                                <input type="number" id="phyRES" class="display-form">
+                            </label>
+                        </fieldset>
+                    </details>
+
+                    <!--Character weapon-->
+                    <details class="accordion">
+                        <summary class="accordion-header">
+                            Weapon
+                        </summary>
+
+                        <fieldset class="fieldset-style fieldset-position">
+                            <legend>Base Stats</legend>
+                            <label>Name:
+                                <input type="text" id="weapon" class="display-form">
+                            </label>
+
+                            <label>Level:
+                                <select name="level" id="levelWea" class="display-form">
+                                    <option value="0/20">0/20 (Ascension 0)</option>
+                                    <option value="20/20">20/20 (Ascension 0)</option>
+                                    <option value="20/40">20/40 (Ascension 1)</option>
+                                    <option value="40/40">40/40 (Ascension 1)</option>
+                                    <option value="40/50">40/50 (Ascension 2)</option>
+                                    <option value="50/50">50/50 (Ascension 2)</option>
+                                    <option value="50/60">50/60 (Ascension 3)</option>
+                                    <option value="60/60">60/60 (Ascension 3)</option>
+                                    <option value="60/70">60/70 (Ascension 4)</option>
+                                    <option value="70/70">70/70 (Ascension 4)</option>
+                                    <option value="70/80">70/80 (Ascension 5)</option>
+                                    <option value="80/80">80/80 (Ascension 5)</option>
+                                    <option value="80/90">80/90 (Ascension 6)</option>
+                                    <option value="90/90">90/90 (Ascension 6)</option>
+                                </select>
+                            </label>
+                        
+                            <label>Base ATK:
+                                <input type="number" id="weaponATK" class="display-form">
+                            </label>
+                        </fieldset>
+
+                        <fieldset class="fieldset-style fieldset-position">
+                            <legend>Advanced Stats</legend>
+
+                            <label>2nd Stat Type:
+                                <select name="2ndStat" id="2ndStat" class="display-form">
+                                    <option value="weaponATK">ATK</option>
+                                    <option value="weaponDEF">DEF</option>
+                                    <option value="weaponHP">HP</option>
+                                    <option value="weaponCD">CRIT DMG</option>
+                                    <option value="weaponCR">CRIT Rate</option>
+                                    <option value="weaponEM">Elemental Mastery</option>
+                                    <option value="weaponER">Energy Recharge</option>
+                                    <option value="weaponPD">Physical DMG</option>
+                                </select>
+                            </label>
+
+                            <label>2nd Stat Value:
+                                <input type="number" id="weaponATK" class="display-form">
+                            </label>
+
+                            <label>Refinement:<br>
+                                <input type="radio" value="1" name="refi" id="refi1" checked>
+                                <label for="refi1">1</label>
+                                <input type="radio" value="2" name="refi" id="refi2">
+                                <label for="refi2">2</label>
+                                <input type="radio" value="3" name="refi" id="refi3">
+                                <label for="refi3">3</label>
+                                <input type="radio" value="4" name="refi" id="refi4">
+                                <label for="refi4">4</label>
+                                <input type="radio" value="5" name="refi" id="refi5">
+                                <label for="refi5">5</label>
+                            </label>
+                        </fieldset>
+                    </details>
+
+                    <!--Character artifacts-->
+                    <details class="accordion">
+                        <summary class="accordion-header">
+                            Artifacts
+                        </summary>
+                        <!--Flower of Life-->
+                        <fieldset class="fieldset-style fieldset-position">
+                            <legend>Flower of Life</legend>
+                            <!--Set-->
+                            <label>Set:
+                                <select name="flower" id="flower" class="display-form">
+                                    <optgroup label="1*">
+                                        <option value="Initiate">Initiate</option>
+                                    </optgroup>
+                                    <optgroup label="1-3*">
+                                        <option value="Adventurer">Adventurer</option>
+                                        <option value="Lucky Dog">Lucky Dog</option>
+                                        <option value="Traveling Doctor">Traveling Doctor</option>
+                                    </optgroup>
+                                    <optgroup label="3-4*">
+                                        <option value="Resolution of Sojourney">Resolution of Sojourney</option>
+                                        <option value="Tiny Miracle">Tiny Miracle</option>
+                                        <option value="Berserker">Berserker</option>
+                                        <option value="Instructor">Instructor</option>
+                                        <option value="The Exiler">The Exile</option>
+                                        <option value="Defender's Will">Defender's Will</option>
+                                        <option value="Brave Heart">Brave Heart</option>
+                                        <option value="Martial Artist">Martial Artist</option>
+                                        <option value="Gambler">Gambler</option>
+                                        <option value="Scholar">Scholar</option>
+                                        <option value="Prayers for Wisdom" disabled>Prayers for Wisdom</option>
+                                        <option value="Prayers for Destiny" disabled>Prayers for Destiny</option>
+                                        <option value="Prayers for Illumination" disabled>Prayers for Illumination</option>
+                                        <option value="Prayers for Springtime" disabled>Prayers for Springtime</option>
+                                    </optgroup>
+                                    <optgroup label="4-5*">
+                                        <option value="Gladiator's Finale">Gladiator's Finale</option>
+                                        <option value="Wanderer's Troupe">Wanderer's Troupe</option>
+                                        <option value="Noblesse Oblige">Noblesse Oblige</option>
+                                        <option value="Bloodstained Chivalry">Bloodstained Chivalry</option>
+                                        <option value="Maiden Beloved">Maiden Beloved</option>
+                                        <option value="Viridescent Venerer">Viridescent Venerer</option>
+                                        <option value="Archaic Petra">Archaic Petra</option>
+                                        <option value="Retracing Bolide">Retracing Bolide</option>
+                                        <option value="Thundersoother">Thundersoother</option>
+                                        <option value="Thundering Fury">Thundering Fury</option>
+                                        <option value="Lavawalker">Lavawalker</option>
+                                        <option value="Crimson Witch of Flames">Crimson Witch of Flames</option>
+                                        <option value="Blizzard Strayer">Blizzard Strayer</option>
+                                        <option value="Heart of Depth">Heart of Depth</option>
+                                        <option value="Tenacity of the Millelith">Tenacity of the Millelith</option>
+                                        <option value="Pale Flame">Pale Flame</option>
+                                        <option value="Shimenawa's Reminiscence">Shimenawa's Reminiscence</option>
+                                        <option value="Emblem of Severed Fate">Emblem of Severed Fate</option>
+                                        <option value="Husk of Opulent Dreams">Husk of Opulent Dreams</option>
+                                        <option value="Ocean-Hued Clam">Ocean-Hued Clam</option>
+                                        <option value="Vermillion Hereafter">Vermillion Hereafter</option>
+                                        <option value="Echoes of an Offering">Echoes of an Offering</option>
+                                    </optgroup>
+                                </select>
+                            </label> 
+                            <!--TODO: compare dopo aver selezionato il set artifatto-->
+                            <div>Name: <span id="flowerName"></span></div>
+
+                            <label>HP (Main Stat Value):
+                                <input type="number" id="flowerHP" class="display-form">
+                            </label>
+
+                            <!--Rarity-->
+                            <!--TODO: se si riesce, su js inserire comportamento che in base all'artefatto scelto, si disabilitano le * che non sono di tale artefatto-->
+                            <label>Rarity:
+                                <select name="flowerRarity" id="flowerRarity" class="display-form">
+                                    <option value="1*">1*</option>
+                                    <option value="2*">2*</option>
+                                    <option value="3*">3*</option>
+                                    <option value="4*">4*</option>
+                                    <option value="5*">5*</option>
+                                </select>
+                            </label>
+
+                            <!--Sub Stat-->
+                            <!--TODO: mettere un bottone ADD che fa apparire ogni volta una select per scegliere il tipo di stato e un campo input per inserire il valore?-->
+                            <label>Sub Stat-1:
+                                <select name="flowerSubStat1" id="flowerSubStat1" class="display-form">
+                                    <option value="HPsub1">HP</option>
+                                    <option value="HP%sub1">HP%</option>
+                                    <option value="ATKsub1">ATK</option>
+                                    <option value="ATK%sub1">ATK%</option>
+                                    <option value="DEFsub1">DEF</option>
+                                    <option value="DEF%sub1">DEF%</option>
+                                    <option value="elMasSub1">Elemental Master</option>
+                                    <option value="eneRechSub1">Energy Recharge</option>
+                                    <option value="critDmgSub1">CRIT DMG</option>
+                                    <option value="critRateSub1">CRIT Rate</option>
+                                    <option value="phyDMGSub1">Physical DMG</option>    
+                                </select>
+                                <input type="number" id="flowerSub1" class="display-form">
+                            </label>
+
+                            <label>Sub Stat-2:
+                                <select name="flowerSubStat2" id="flowerSubStat2" class="display-form">
+                                    <option value="HPsub2">HP</option>
+                                    <option value="HP%sub2">HP%</option>
+                                    <option value="ATKsub2">ATK</option>
+                                    <option value="ATK%sub2">ATK%</option>
+                                    <option value="DEFsub2">DEF</option>
+                                    <option value="DEF%sub2">DEF%</option>
+                                    <option value="elMasSub2">Elemental Master</option>
+                                    <option value="eneRechSub2">Energy Recharge</option>
+                                    <option value="critDmgSub2">CRIT DMG</option>
+                                    <option value="critRateSub2">CRIT Rate</option>
+                                    <option value="phyDMGSub2">Physical DMG</option>    
+                                </select>
+                                <input type="number" id="flowerSub2" class="display-form">
+                            </label>
+                            
+                            <label>Sub Stat-3:
+                                <select name="flowerSubStat3" id="flowerSubStat3" class="display-form">
+                                    <option value="HPsub3">HP</option>
+                                    <option value="HP%sub3">HP%</option>
+                                    <option value="ATKsub3">ATK</option>
+                                    <option value="ATK%sub3">ATK%</option>
+                                    <option value="DEFsub3">DEF</option>
+                                    <option value="DEF%sub3">DEF%</option>
+                                    <option value="elMasSub3">Elemental Master</option>
+                                    <option value="eneRechSub3">Energy Recharge</option>
+                                    <option value="critDmgSub3">CRIT DMG</option>
+                                    <option value="critRateSub3">CRIT Rate</option>
+                                    <option value="phyDMGSub3">Physical DMG</option>    
+                                </select>
+                                <input type="number" id="flowerSub3" class="display-form">
+                            </label>
+
+                            <label>Sub Stat-4:
+                                <select name="flowerSubStat4" id="flowerSubStat4" class="display-form">
+                                    <option value="HPsub4">HP</option>
+                                    <option value="HP%sub4">HP%</option>
+                                    <option value="ATKsub4">ATK</option>
+                                    <option value="ATK%sub4">ATK%</option>
+                                    <option value="DEFsub4">DEF</option>
+                                    <option value="DEF%sub4">DEF%</option>
+                                    <option value="elMasSub4">Elemental Master</option>
+                                    <option value="eneRechSub4">Energy Recharge</option>
+                                    <option value="critDmgSub4">CRIT DMG</option>
+                                    <option value="critRateSub4">CRIT Rate</option>
+                                    <option value="phyDMGSub4">Physical DMG</option>    
+                                </select>
+                                <input type="number" id="flowerSub4" class="display-form">
+                            </label>
+                        </fieldset> 
+
+                        <!--Plume of Death-->
+                        <fieldset class="fieldset-style fieldset-position">
+                            <legend>Plume of Death</legend>
+                            <!--Set-->
+                            <label>Set:
+                                <select name="plume" id="plume" class="display-form">
+                                    <optgroup label="1*">
+                                        <option value="Initiate">Initiate</option>
+                                    </optgroup>
+                                    <optgroup label="1-3*">
+                                        <option value="Adventurer">Adventurer</option>
+                                        <option value="Lucky Dog">Lucky Dog</option>
+                                        <option value="Traveling Doctor">Traveling Doctor</option>
+                                    </optgroup>
+                                    <optgroup label="3-4*">
+                                        <option value="Resolution of Sojourney">Resolution of Sojourney</option>
+                                        <option value="Tiny Miracle">Tiny Miracle</option>
+                                        <option value="Berserker">Berserker</option>
+                                        <option value="Instructor">Instructor</option>
+                                        <option value="The Exiler">The Exile</option>
+                                        <option value="Defender's Will">Defender's Will</option>
+                                        <option value="Brave Heart">Brave Heart</option>
+                                        <option value="Martial Artist">Martial Artist</option>
+                                        <option value="Gambler">Gambler</option>
+                                        <option value="Scholar">Scholar</option>
+                                        <option value="Prayers for Wisdom" disabled>Prayers for Wisdom</option>
+                                        <option value="Prayers for Destiny" disabled>Prayers for Destiny</option>
+                                        <option value="Prayers for Illumination" disabled>Prayers for Illumination</option>
+                                        <option value="Prayers for Springtime" disabled>Prayers for Springtime</option>
+                                    </optgroup>
+                                    <optgroup label="4-5*">
+                                        <option value="Gladiator's Finale">Gladiator's Finale</option>
+                                        <option value="Wanderer's Troupe">Wanderer's Troupe</option>
+                                        <option value="Noblesse Oblige">Noblesse Oblige</option>
+                                        <option value="Bloodstained Chivalry">Bloodstained Chivalry</option>
+                                        <option value="Maiden Beloved">Maiden Beloved</option>
+                                        <option value="Viridescent Venerer">Viridescent Venerer</option>
+                                        <option value="Archaic Petra">Archaic Petra</option>
+                                        <option value="Retracing Bolide">Retracing Bolide</option>
+                                        <option value="Thundersoother">Thundersoother</option>
+                                        <option value="Thundering Fury">Thundering Fury</option>
+                                        <option value="Lavawalker">Lavawalker</option>
+                                        <option value="Crimson Witch of Flames">Crimson Witch of Flames</option>
+                                        <option value="Blizzard Strayer">Blizzard Strayer</option>
+                                        <option value="Heart of Depth">Heart of Depth</option>
+                                        <option value="Tenacity of the Millelith">Tenacity of the Millelith</option>
+                                        <option value="Pale Flame">Pale Flame</option>
+                                        <option value="Shimenawa's Reminiscence">Shimenawa's Reminiscence</option>
+                                        <option value="Emblem of Severed Fate">Emblem of Severed Fate</option>
+                                        <option value="Husk of Opulent Dreams">Husk of Opulent Dreams</option>
+                                        <option value="Ocean-Hued Clam">Ocean-Hued Clam</option>
+                                        <option value="Vermillion Hereafter">Vermillion Hereafter</option>
+                                        <option value="Echoes of an Offering">Echoes of an Offering</option>
+                                    </optgroup>
+                                </select>
+                            </label> 
+                            <!--TODO: compare dopo aver selezionato il set artifatto-->
+                            <div>Name: <span id="plumeName"></span></div>
+
+                            <label>ATK (Main Stat Value):
+                                <input type="number" id="plumeATK" class="display-form">
+                            </label>
+
+                            <!--Rarity-->
+                            <!--TODO: Se si riesce, su js inserire comportamento che in base all'artefatto scelto, si disabilitano le * che non sono di tale artefatto-->
+                            <label>Rarity:
+                                <select name="plumeRarity" id="plumeRarity" class="display-form">
+                                    <option value="1*">1*</option>
+                                    <option value="2*">2*</option>
+                                    <option value="3*">3*</option>
+                                    <option value="4*">4*</option>
+                                    <option value="5*">5*</option>
+                                </select>
+                            </label> 
+
+                            <!--Sub Stat-->
+                            <!--TODO: mettere un bottone ADD che fa apparire ogni volta una select per scegliere il tipo di stato e un campo input per inserire il valore?-->
+                            <label>Sub Stat-1:
+                                <select name="plumeSubStat1" id="plumeSubStat1" class="display-form">
+                                    <option value="HPsub1">HP</option>
+                                    <option value="HP%sub1">HP%</option>
+                                    <option value="ATKsub1">ATK</option>
+                                    <option value="ATK%sub1">ATK%</option>
+                                    <option value="DEFsub1">DEF</option>
+                                    <option value="DEF%sub1">DEF%</option>
+                                    <option value="elMasSub1">Elemental Master</option>
+                                    <option value="eneRechSub1">Energy Recharge</option>
+                                    <option value="critDmgSub1">CRIT DMG</option>
+                                    <option value="critRateSub1">CRIT Rate</option>
+                                    <option value="phyDMGSub1">Physical DMG</option>    
+                                </select>
+                                <input type="number" id="flowerSub1" class="display-form">
+                            </label>
+
+                            <label>Sub Stat-2:
+                                <select name="plumeSubStat2" id="plumeSubStat2" class="display-form">
+                                    <option value="HPsub2">HP</option>
+                                    <option value="HP%sub2">HP%</option>
+                                    <option value="ATKsub2">ATK</option>
+                                    <option value="ATK%sub2">ATK%</option>
+                                    <option value="DEFsub2">DEF</option>
+                                    <option value="DEF%sub2">DEF%</option>
+                                    <option value="elMasSub2">Elemental Master</option>
+                                    <option value="eneRechSub2">Energy Recharge</option>
+                                    <option value="critDmgSub2">CRIT DMG</option>
+                                    <option value="critRateSub2">CRIT Rate</option>
+                                    <option value="phyDMGSub2">Physical DMG</option>    
+                                </select>
+                                <input type="number" id="flowerSub2" class="display-form">
+                            </label>
+                            
+                            <label>Sub Stat-3:
+                                <select name="plumeSubStat3" id="plumeSubStat3" class="display-form">
+                                    <option value="HPsub3">HP</option>
+                                    <option value="HP%sub3">HP%</option>
+                                    <option value="ATKsub3">ATK</option>
+                                    <option value="ATK%sub3">ATK%</option>
+                                    <option value="DEFsub3">DEF</option>
+                                    <option value="DEF%sub3">DEF%</option>
+                                    <option value="elMasSub3">Elemental Master</option>
+                                    <option value="eneRechSub3">Energy Recharge</option>
+                                    <option value="critDmgSub3">CRIT DMG</option>
+                                    <option value="critRateSub3">CRIT Rate</option>
+                                    <option value="phyDMGSub3">Physical DMG</option>    
+                                </select>
+                                <input type="number" id="flowerSub3" class="display-form">
+                            </label>
+
+                            <label>Sub Stat-4:
+                                <select name="plumeSubStat4" id="plumeSubStat4" class="display-form">
+                                    <option value="HPsub4">HP</option>
+                                    <option value="HP%sub4">HP%</option>
+                                    <option value="ATKsub4">ATK</option>
+                                    <option value="ATK%sub4">ATK%</option>
+                                    <option value="DEFsub4">DEF</option>
+                                    <option value="DEF%sub4">DEF%</option>
+                                    <option value="elMasSub4">Elemental Master</option>
+                                    <option value="eneRechSub4">Energy Recharge</option>
+                                    <option value="critDmgSub4">CRIT DMG</option>
+                                    <option value="critRateSub4">CRIT Rate</option>
+                                    <option value="phyDMGSub4">Physical DMG</option>    
+                                </select>
+                                <input type="number" id="flowerSub4" class="display-form">
+                            </label>
+                        </fieldset> 
+
+                        <!--Sands of Eon-->
+                        <fieldset class="fieldset-style fieldset-position">
+                            <legend>Sands of Eon</legend>
+                            <!--Set-->
+                            <label>Set:
+                                <select name="clock" id="clock" class="display-form">
+                                    <optgroup label="1*">
+                                        <option value="Initiate">Initiate</option>
+                                    </optgroup>
+                                    <optgroup label="1-3*">
+                                        <option value="Adventurer">Adventurer</option>
+                                        <option value="Lucky Dog">Lucky Dog</option>
+                                        <option value="Traveling Doctor">Traveling Doctor</option>
+                                    </optgroup>
+                                    <optgroup label="3-4*">
+                                        <option value="Resolution of Sojourney">Resolution of Sojourney</option>
+                                        <option value="Tiny Miracle">Tiny Miracle</option>
+                                        <option value="Berserker">Berserker</option>
+                                        <option value="Instructor">Instructor</option>
+                                        <option value="The Exiler">The Exile</option>
+                                        <option value="Defender's Will">Defender's Will</option>
+                                        <option value="Brave Heart">Brave Heart</option>
+                                        <option value="Martial Artist">Martial Artist</option>
+                                        <option value="Gambler">Gambler</option>
+                                        <option value="Scholar">Scholar</option>
+                                        <option value="Prayers for Wisdom" disabled>Prayers for Wisdom</option>
+                                        <option value="Prayers for Destiny" disabled>Prayers for Destiny</option>
+                                        <option value="Prayers for Illumination" disabled>Prayers for Illumination</option>
+                                        <option value="Prayers for Springtime" disabled>Prayers for Springtime</option>
+                                    </optgroup>
+                                    <optgroup label="4-5*">
+                                        <option value="Gladiator's Finale">Gladiator's Finale</option>
+                                        <option value="Wanderer's Troupe">Wanderer's Troupe</option>
+                                        <option value="Noblesse Oblige">Noblesse Oblige</option>
+                                        <option value="Bloodstained Chivalry">Bloodstained Chivalry</option>
+                                        <option value="Maiden Beloved">Maiden Beloved</option>
+                                        <option value="Viridescent Venerer">Viridescent Venerer</option>
+                                        <option value="Archaic Petra">Archaic Petra</option>
+                                        <option value="Retracing Bolide">Retracing Bolide</option>
+                                        <option value="Thundersoother">Thundersoother</option>
+                                        <option value="Thundering Fury">Thundering Fury</option>
+                                        <option value="Lavawalker">Lavawalker</option>
+                                        <option value="Crimson Witch of Flames">Crimson Witch of Flames</option>
+                                        <option value="Blizzard Strayer">Blizzard Strayer</option>
+                                        <option value="Heart of Depth">Heart of Depth</option>
+                                        <option value="Tenacity of the Millelith">Tenacity of the Millelith</option>
+                                        <option value="Pale Flame">Pale Flame</option>
+                                        <option value="Shimenawa's Reminiscence">Shimenawa's Reminiscence</option>
+                                        <option value="Emblem of Severed Fate">Emblem of Severed Fate</option>
+                                        <option value="Husk of Opulent Dreams">Husk of Opulent Dreams</option>
+                                        <option value="Ocean-Hued Clam">Ocean-Hued Clam</option>
+                                        <option value="Vermillion Hereafter">Vermillion Hereafter</option>
+                                        <option value="Echoes of an Offering">Echoes of an Offering</option>
+                                    </optgroup>
+                                </select>
+                            </label> 
+
+                            <!--TODO: compare dopo aver selezionato il set artifatto-->
+                            <div>Name: <span id="clockName"></span></div>
+
+                            <label>Main Stat:
+                                <select name="clockMainStat" id="clockMainStat" class="display-form">
+                                    <option value="clockHP%">HP%</option>
+                                    <option value="clockATK%">ATK%</option>
+                                    <option value="clockDEF%">DEF%</option>
+                                    <option value="clockEM">Elemental Mastery</option>
+                                    <option value="clockER">Energy Recharge</option>
+                                </select>
+                            </label>
+
+                            <label>Main Stat Value:
+                                <input type="number" id="clockValueStat" class="display-form">
+                            </label>
+
+                            <!--Rarity-->
+                            <!--TODO: Se si riesce, su js inserire comportamento che in base all'artefatto scelto, si disabilitano le * che non sono di tale artefatto-->
+                            <label>Rarity:
+                                <select name="clockRarity" id="clockRarity" class="display-form">
+                                    <option value="1*">1*</option>
+                                    <option value="2*">2*</option>
+                                    <option value="3*">3*</option>
+                                    <option value="4*">4*</option>
+                                    <option value="5*">5*</option>
+                                </select>
+                            </label>
+
+                            <!--Sub Stat-->
+                            <!--TODO: mettere un bottone ADD che fa apparire ogni volta una select per scegliere il tipo di stato e un campo input per inserire il valore?-->
+                            <label>Sub Stat-1:
+                                <select name="clockSubStat1" id="clockSubStat1" class="display-form">
+                                    <option value="HPsub1">HP</option>
+                                    <option value="HP%sub1">HP%</option>
+                                    <option value="ATKsub1">ATK</option>
+                                    <option value="ATK%sub1">ATK%</option>
+                                    <option value="DEFsub1">DEF</option>
+                                    <option value="DEF%sub1">DEF%</option>
+                                    <option value="elMasSub1">Elemental Master</option>
+                                    <option value="eneRechSub1">Energy Recharge</option>
+                                    <option value="critDmgSub1">CRIT DMG</option>
+                                    <option value="critRateSub1">CRIT Rate</option>
+                                    <option value="phyDMGSub1">Physical DMG</option>    
+                                </select>
+                                <input type="number" id="clockSub1" class="display-form">
+                            </label>
+
+                            <label>Sub Stat-2:
+                                <select name="clockSubStat2" id="clockSubStat2" class="display-form">
+                                    <option value="HPsub2">HP</option>
+                                    <option value="HP%sub2">HP%</option>
+                                    <option value="ATKsub2">ATK</option>
+                                    <option value="ATK%sub2">ATK%</option>
+                                    <option value="DEFsub2">DEF</option>
+                                    <option value="DEF%sub2">DEF%</option>
+                                    <option value="elMasSub2">Elemental Master</option>
+                                    <option value="eneRechSub2">Energy Recharge</option>
+                                    <option value="critDmgSub2">CRIT DMG</option>
+                                    <option value="critRateSub2">CRIT Rate</option>
+                                    <option value="phyDMGSub2">Physical DMG</option>    
+                                </select>
+                                <input type="number" id="clockSub2" class="display-form">
+                            </label>
+                            
+                            <label>Sub Stat-3:
+                                <select name="clockSubStat3" id="clockSubStat3" class="display-form">
+                                    <option value="HPsub3">HP</option>
+                                    <option value="HP%sub3">HP%</option>
+                                    <option value="ATKsub3">ATK</option>
+                                    <option value="ATK%sub3">ATK%</option>
+                                    <option value="DEFsub3">DEF</option>
+                                    <option value="DEF%sub3">DEF%</option>
+                                    <option value="elMasSub3">Elemental Master</option>
+                                    <option value="eneRechSub3">Energy Recharge</option>
+                                    <option value="critDmgSub3">CRIT DMG</option>
+                                    <option value="critRateSub3">CRIT Rate</option>
+                                    <option value="phyDMGSub3">Physical DMG</option>    
+                                </select>
+                                <input type="number" id="clockSub3" class="display-form">
+                            </label>
+
+                            <label>Sub Stat-4:
+                                <select name="clockSubStat4" id="clockSubStat4" class="display-form">
+                                    <option value="HPsub4">HP</option>
+                                    <option value="HP%sub4">HP%</option>
+                                    <option value="ATKsub4">ATK</option>
+                                    <option value="ATK%sub4">ATK%</option>
+                                    <option value="DEFsub4">DEF</option>
+                                    <option value="DEF%sub4">DEF%</option>
+                                    <option value="elMasSub4">Elemental Master</option>
+                                    <option value="eneRechSub4">Energy Recharge</option>
+                                    <option value="critDmgSub4">CRIT DMG</option>
+                                    <option value="critRateSub4">CRIT Rate</option>
+                                    <option value="phyDMGSub4">Physical DMG</option>    
+                                </select>
+                                <input type="number" id="clockSub4" class="display-form">
+                            </label>
+                        </fieldset> 
+
+                        <!--Goblet of Eonothem-->
+                        <fieldset class="fieldset-style fieldset-position">
+                            <legend>Goblet of Eonothem</legend>
+                            <!--Set-->
+                            <label>Set:
+                                <select name="goblet" id="goblet" class="display-form">
+                                    <optgroup label="1*">
+                                        <option value="Initiate">Initiate</option>
+                                    </optgroup>
+                                    <optgroup label="1-3*">
+                                        <option value="Adventurer">Adventurer</option>
+                                        <option value="Lucky Dog">Lucky Dog</option>
+                                        <option value="Traveling Doctor">Traveling Doctor</option>
+                                    </optgroup>
+                                    <optgroup label="3-4*">
+                                        <option value="Resolution of Sojourney">Resolution of Sojourney</option>
+                                        <option value="Tiny Miracle">Tiny Miracle</option>
+                                        <option value="Berserker">Berserker</option>
+                                        <option value="Instructor">Instructor</option>
+                                        <option value="The Exiler">The Exile</option>
+                                        <option value="Defender's Will">Defender's Will</option>
+                                        <option value="Brave Heart">Brave Heart</option>
+                                        <option value="Martial Artist">Martial Artist</option>
+                                        <option value="Gambler">Gambler</option>
+                                        <option value="Scholar">Scholar</option>
+                                        <option value="Prayers for Wisdom" disabled>Prayers for Wisdom</option>
+                                        <option value="Prayers for Destiny" disabled>Prayers for Destiny</option>
+                                        <option value="Prayers for Illumination" disabled>Prayers for Illumination</option>
+                                        <option value="Prayers for Springtime" disabled>Prayers for Springtime</option>
+                                    </optgroup>
+                                    <optgroup label="4-5*">
+                                        <option value="Gladiator's Finale">Gladiator's Finale</option>
+                                        <option value="Wanderer's Troupe">Wanderer's Troupe</option>
+                                        <option value="Noblesse Oblige">Noblesse Oblige</option>
+                                        <option value="Bloodstained Chivalry">Bloodstained Chivalry</option>
+                                        <option value="Maiden Beloved">Maiden Beloved</option>
+                                        <option value="Viridescent Venerer">Viridescent Venerer</option>
+                                        <option value="Archaic Petra">Archaic Petra</option>
+                                        <option value="Retracing Bolide">Retracing Bolide</option>
+                                        <option value="Thundersoother">Thundersoother</option>
+                                        <option value="Thundering Fury">Thundering Fury</option>
+                                        <option value="Lavawalker">Lavawalker</option>
+                                        <option value="Crimson Witch of Flames">Crimson Witch of Flames</option>
+                                        <option value="Blizzard Strayer">Blizzard Strayer</option>
+                                        <option value="Heart of Depth">Heart of Depth</option>
+                                        <option value="Tenacity of the Millelith">Tenacity of the Millelith</option>
+                                        <option value="Pale Flame">Pale Flame</option>
+                                        <option value="Shimenawa's Reminiscence">Shimenawa's Reminiscence</option>
+                                        <option value="Emblem of Severed Fate">Emblem of Severed Fate</option>
+                                        <option value="Husk of Opulent Dreams">Husk of Opulent Dreams</option>
+                                        <option value="Ocean-Hued Clam">Ocean-Hued Clam</option>
+                                        <option value="Vermillion Hereafter">Vermillion Hereafter</option>
+                                        <option value="Echoes of an Offering">Echoes of an Offering</option>
+                                    </optgroup>
+                                </select>
+                            </label> 
+
+                            <!--TODO: compare dopo aver selezionato il set artifatto-->
+                            <div>Name: <span id="gobletName"></span></div>
+
+                            <label>Main Stat:
+                                <select name="gobletMainStat" id="gobletMainStat" class="display-form">
+                                    <option value="gobletHP%">HP%</option>
+                                    <option value="gobletATK%">ATK%</option>
+                                    <option value="gobletDEF%">DEF%</option>
+                                    <option value="gobletEM">Elemental Mastery</option>
+                                    <option value="gobletElDMG%">Elemental DMG Bonus%</option>
+                                    <option value="gobletPhyDMG%">Physical DMG Bonus%</option>
+                                </select>
+                            </label>
+
+                            <label>Main Stat Value:
+                                <input type="number" id="gobletValueStat" class="display-form">
+                            </label>
+
+                            <!--Rarity-->
+                            <!--TODO: Se si riesce, su js inserire comportamento che in base all'artefatto scelto, si disabilitano le * che non sono di tale artefatto-->
+                            <label>Rarity:
+                                <select name="gobletRarity" id="gobletRarity" class="display-form">
+                                    <option value="1*">1*</option>
+                                    <option value="2*">2*</option>
+                                    <option value="3*">3*</option>
+                                    <option value="4*">4*</option>
+                                    <option value="5*">5*</option>
+                                </select>
+                            </label> 
+
+                            <!--Sub Stat-->
+                            <!--TODO: mettere un bottone ADD che fa apparire ogni volta una select per scegliere il tipo di stato e un campo input per inserire il valore?-->
+                            <label>Sub Stat-1:
+                                <select name="gobletSubStat1" id="gobletSubStat1" class="display-form">
+                                    <option value="HPsub1">HP</option>
+                                    <option value="HP%sub1">HP%</option>
+                                    <option value="ATKsub1">ATK</option>
+                                    <option value="ATK%sub1">ATK%</option>
+                                    <option value="DEFsub1">DEF</option>
+                                    <option value="DEF%sub1">DEF%</option>
+                                    <option value="elMasSub1">Elemental Master</option>
+                                    <option value="eneRechSub1">Energy Recharge</option>
+                                    <option value="critDmgSub1">CRIT DMG</option>
+                                    <option value="critRateSub1">CRIT Rate</option>
+                                    <option value="phyDMGSub1">Physical DMG</option>    
+                                </select>
+                                <input type="number" id="gobletSub1" class="display-form">
+                            </label>
+
+                            <label>Sub Stat-2:
+                                <select name="gobletSubStat2" id="gobletSubStat2" class="display-form">
+                                    <option value="HPsub2">HP</option>
+                                    <option value="HP%sub2">HP%</option>
+                                    <option value="ATKsub2">ATK</option>
+                                    <option value="ATK%sub2">ATK%</option>
+                                    <option value="DEFsub2">DEF</option>
+                                    <option value="DEF%sub2">DEF%</option>
+                                    <option value="elMasSub2">Elemental Master</option>
+                                    <option value="eneRechSub2">Energy Recharge</option>
+                                    <option value="critDmgSub2">CRIT DMG</option>
+                                    <option value="critRateSub2">CRIT Rate</option>
+                                    <option value="phyDMGSub2">Physical DMG</option>    
+                                </select>
+                                <input type="number" id="gobletSub2" class="display-form">
+                            </label>
+                            
+                            <label>Sub Stat-3:
+                                <select name="gobletSubStat3" id="gobletSubStat3" class="display-form">
+                                    <option value="HPsub3">HP</option>
+                                    <option value="HP%sub3">HP%</option>
+                                    <option value="ATKsub3">ATK</option>
+                                    <option value="ATK%sub3">ATK%</option>
+                                    <option value="DEFsub3">DEF</option>
+                                    <option value="DEF%sub3">DEF%</option>
+                                    <option value="elMasSub3">Elemental Master</option>
+                                    <option value="eneRechSub3">Energy Recharge</option>
+                                    <option value="critDmgSub3">CRIT DMG</option>
+                                    <option value="critRateSub3">CRIT Rate</option>
+                                    <option value="phyDMGSub3">Physical DMG</option>    
+                                </select>
+                                <input type="number" id="gobletSub3" class="display-form">
+                            </label>
+
+                            <label>Sub Stat-4:
+                                <select name="gobletSubStat4" id="gobletSubStat4" class="display-form">
+                                    <option value="HPsub4">HP</option>
+                                    <option value="HP%sub4">HP%</option>
+                                    <option value="ATKsub4">ATK</option>
+                                    <option value="ATK%sub4">ATK%</option>
+                                    <option value="DEFsub4">DEF</option>
+                                    <option value="DEF%sub4">DEF%</option>
+                                    <option value="elMasSub4">Elemental Master</option>
+                                    <option value="eneRechSub4">Energy Recharge</option>
+                                    <option value="critDmgSub4">CRIT DMG</option>
+                                    <option value="critRateSub4">CRIT Rate</option>
+                                    <option value="phyDMGSub4">Physical DMG</option>    
+                                </select>
+                                <input type="number" id="gobletSub4" class="display-form">
+                            </label>
+                        </fieldset> 
+
+                        <!--Circlet of Logos-->
+                        <fieldset class="fieldset-style fieldset-position">
+                            <legend>Circlet of Logos</legend>
+                            <!--Set-->
+                            <label>Set:
+                                <select name="crown" id="crown" class="display-form">
+                                    <optgroup label="1*">
+                                        <option value="Initiate">Initiate</option>
+                                    </optgroup>
+                                    <optgroup label="1-3*">
+                                        <option value="Adventurer">Adventurer</option>
+                                        <option value="Lucky Dog">Lucky Dog</option>
+                                        <option value="Traveling Doctor">Traveling Doctor</option>
+                                    </optgroup>
+                                    <optgroup label="3-4*">
+                                        <option value="Resolution of Sojourney">Resolution of Sojourney</option>
+                                        <option value="Tiny Miracle">Tiny Miracle</option>
+                                        <option value="Berserker">Berserker</option>
+                                        <option value="Instructor">Instructor</option>
+                                        <option value="The Exiler">The Exile</option>
+                                        <option value="Defender's Will">Defender's Will</option>
+                                        <option value="Brave Heart">Brave Heart</option>
+                                        <option value="Martial Artist">Martial Artist</option>
+                                        <option value="Gambler">Gambler</option>
+                                        <option value="Scholar">Scholar</option>
+                                        <option value="Prayers for Wisdom">Prayers for Wisdom</option>
+                                        <option value="Prayers for Destiny">Prayers for Destiny</option>
+                                        <option value="Prayers for Illumination">Prayers for Illumination</option>
+                                        <option value="Prayers for Springtime">Prayers for Springtime</option>
+                                    </optgroup>
+                                    <optgroup label="4-5*">
+                                        <option value="Gladiator's Finale">Gladiator's Finale</option>
+                                        <option value="Wanderer's Troupe">Wanderer's Troupe</option>
+                                        <option value="Noblesse Oblige">Noblesse Oblige</option>
+                                        <option value="Bloodstained Chivalry">Bloodstained Chivalry</option>
+                                        <option value="Maiden Beloved">Maiden Beloved</option>
+                                        <option value="Viridescent Venerer">Viridescent Venerer</option>
+                                        <option value="Archaic Petra">Archaic Petra</option>
+                                        <option value="Retracing Bolide">Retracing Bolide</option>
+                                        <option value="Thundersoother">Thundersoother</option>
+                                        <option value="Thundering Fury">Thundering Fury</option>
+                                        <option value="Lavawalker">Lavawalker</option>
+                                        <option value="Crimson Witch of Flames">Crimson Witch of Flames</option>
+                                        <option value="Blizzard Strayer">Blizzard Strayer</option>
+                                        <option value="Heart of Depth">Heart of Depth</option>
+                                        <option value="Tenacity of the Millelith">Tenacity of the Millelith</option>
+                                        <option value="Pale Flame">Pale Flame</option>
+                                        <option value="Shimenawa's Reminiscence">Shimenawa's Reminiscence</option>
+                                        <option value="Emblem of Severed Fate">Emblem of Severed Fate</option>
+                                        <option value="Husk of Opulent Dreams">Husk of Opulent Dreams</option>
+                                        <option value="Ocean-Hued Clam">Ocean-Hued Clam</option>
+                                        <option value="Vermillion Hereafter">Vermillion Hereafter</option>
+                                        <option value="Echoes of an Offering">Echoes of an Offering</option>
+                                    </optgroup>
+                                </select>
+                            </label> 
+
+                            <!--TODO: compare dopo aver selezionato il set artifatto-->
+                            <div>Name: <span id="crownName"></span></div>
+
+                            <label>Main Stat:
+                                <select name="crownMainStat" id="crownMainStat" class="display-form">
+                                    <option value="crownHP%">HP%</option>
+                                    <option value="crownATK%">ATK%</option>
+                                    <option value="crownDEF%">DEF%</option>
+                                    <option value="crownEM">Elemental Mastery</option>
+                                    <option value="crownCR%">CRIT Rate%</option>
+                                    <option value="crownCD%">CRIT DMG%</option>
+                                    <option value="crownHB%">Healing Bonus%</option>
+                                </select>
+                            </label>
+
+                            <label>Main Stat Value:
+                                <input type="number" id="crownValueStat" class="display-form">
+                            </label>
+
+                            <!--Rarity-->
+                            <!--TODO: Se si riesce, su js inserire comportamento che in base all'artefatto scelto, si disabilitano le * che non sono di tale artefatto-->
+                            <label>Rarity:
+                                <select name="crownRarity" id="crownRarity" class="display-form">
+                                    <option value="1*">1*</option>
+                                    <option value="2*">2*</option>
+                                    <option value="3*">3*</option>
+                                    <option value="4*">4*</option>
+                                    <option value="5*">5*</option>
+                                </select>
+                            </label> 
+
+                            <!--Sub Stat-->
+                            <!--TODO: mettere un bottone ADD che fa apparire ogni volta una select per scegliere il tipo di stato e un campo input per inserire il valore?-->
+                            <label>Sub Stat-1:
+                                <select name="crownSubStat1" id="crownSubStat1" class="display-form">
+                                    <option value="HPsub1">HP</option>
+                                    <option value="HP%sub1">HP%</option>
+                                    <option value="ATKsub1">ATK</option>
+                                    <option value="ATK%sub1">ATK%</option>
+                                    <option value="DEFsub1">DEF</option>
+                                    <option value="DEF%sub1">DEF%</option>
+                                    <option value="elMasSub1">Elemental Master</option>
+                                    <option value="eneRechSub1">Energy Recharge</option>
+                                    <option value="critDmgSub1">CRIT DMG</option>
+                                    <option value="critRateSub1">CRIT Rate</option>
+                                    <option value="phyDMGSub1">Physical DMG</option>    
+                                </select>
+                                <input type="number" id="crownSub1" class="display-form">
+                            </label>
+
+                            <label>Sub Stat-2:
+                                <select name="crownSubStat2" id="crownSubStat2" class="display-form">
+                                    <option value="HPsub2">HP</option>
+                                    <option value="HP%sub2">HP%</option>
+                                    <option value="ATKsub2">ATK</option>
+                                    <option value="ATK%sub2">ATK%</option>
+                                    <option value="DEFsub2">DEF</option>
+                                    <option value="DEF%sub2">DEF%</option>
+                                    <option value="elMasSub2">Elemental Master</option>
+                                    <option value="eneRechSub2">Energy Recharge</option>
+                                    <option value="critDmgSub2">CRIT DMG</option>
+                                    <option value="critRateSub2">CRIT Rate</option>
+                                    <option value="phyDMGSub2">Physical DMG</option>    
+                                </select>
+                                <input type="number" id="crownSub2" class="display-form">
+                            </label>
+                            
+                            <label>Sub Stat-3:
+                                <select name="crownSubStat3" id="crownSubStat3" class="display-form">
+                                    <option value="HPsub3">HP</option>
+                                    <option value="HP%sub3">HP%</option>
+                                    <option value="ATKsub3">ATK</option>
+                                    <option value="ATK%sub3">ATK%</option>
+                                    <option value="DEFsub3">DEF</option>
+                                    <option value="DEF%sub3">DEF%</option>
+                                    <option value="elMasSub3">Elemental Master</option>
+                                    <option value="eneRechSub3">Energy Recharge</option>
+                                    <option value="critDmgSub3">CRIT DMG</option>
+                                    <option value="critRateSub3">CRIT Rate</option>
+                                    <option value="phyDMGSub3">Physical DMG</option>    
+                                </select>
+                                <input type="number" id="crownSub3" class="display-form">
+                            </label>
+
+                            <label>Sub Stat-4:
+                                <select name="crownSubStat4" id="crownSubStat4" class="display-form">
+                                    <option value="HPsub4">HP</option>
+                                    <option value="HP%sub4">HP%</option>
+                                    <option value="ATKsub4">ATK</option>
+                                    <option value="ATK%sub4">ATK%</option>
+                                    <option value="DEFsub4">DEF</option>
+                                    <option value="DEF%sub4">DEF%</option>
+                                    <option value="elMasSub4">Elemental Master</option>
+                                    <option value="eneRechSub4">Energy Recharge</option>
+                                    <option value="critDmgSub4">CRIT DMG</option>
+                                    <option value="critRateSub4">CRIT Rate</option>
+                                    <option value="phyDMGSub4">Physical DMG</option>    
+                                </select>
+                                <input type="number" id="crownSub4" class="display-form">
+                            </label>
+                        </fieldset> 
+
+                        <!--Set Bonus-->
+                        <fieldset class="fieldset-style fieldset-position">
+                            <legend>Set Bonus</legend>
+                            <!--TODO: al click su uno dei 2 elementi si apre tooltip con descrizione-->
+                            <div>
+                                <span>2-Pieces Set</span><br>
+                                <span>4-Pieces Set</span><br>
+                            </div>   
+                        </fieldset> 
+                    </details>
+
+                    <!--Character constellation-->
+                    <details class="accordion">
+                        <summary class="accordion-header">
+                            Constellation
+                        </summary>
+
+                        <fieldset class="fieldset-style">
+                            <p>Check the character constellation you have unlocked</p>
+                            <input type="checkbox" id="C1" name="C1" value="C1">
+                            <label for="C1"> C1: <span id="C1name"></span></label><br>
+                            <input type="checkbox" id="C2" name="C2" value="C2">
+                            <label for="C2"> C2: <span id="C2name"></span></label><br>
+                            <input type="checkbox" id="C3" name="C3" value="C3">
+                            <label for="C3"> C3: <span id="C3name"></span></label><br>
+                            <input type="checkbox" id="C4" name="C4" value="C4">
+                            <label for="C4"> C4: <span id="C4name"></span></label><br>
+                            <input type="checkbox" id="C5" name="C5" value="C5">
+                            <label for="C5"> C5: <span id="C5name"></span></label><br>
+                            <input type="checkbox" id="C6" name="C6" value="C6">
+                            <label for="C6"> C6: <span id="C6name"></span></label><br>
+                        </fieldset>
+                    </details>
+
+                    <!--Character talents-->
+                    <details class="accordion">
+                        <summary class="accordion-header">
+                            Talents
+                        </summary>
+
+                        <!--Normal Attack-->
+                        <fieldset class="fieldset-style fieldset-position">
+                            <legend>Normal Attack</legend>
+
+                            <label>Name:
+                                <input type="text" id="nameNormAtk" class="display-form">
+                            </label>
+
+                            <label>Level:
+                                <select name="level" id="levelNormAtk" class="display-form">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                </select>
+                            </label>
+
+                            <label>1-Hit DMG:
+                                <input type="number" id="1hit" class="display-form">
+                            </label>
+
+                            <label>2-Hit DMG:
+                                <input type="number" id="2hit" class="display-form">
+                            </label>
+
+                            <label>3-Hit DMG:
+                                <input type="number" id="3hit" class="display-form">
+                            </label>
+
+                            <label>4-Hit DMG:
+                                <input type="number" id="4hit" class="display-form">
+                            </label>
+
+                            <label>Charged Attack DMG:
+                                <input type="number" id="eneRech" class="display-form">
+                            </label>
+
+                            <label>Charged Attack Stamina Cost:
+                                <input type="number" id="cdRed" class="display-form">
+                            </label>
+
+                            <label>Plunge DMG:
+                                <input type="number" id="eneRech" class="display-form">
+                            </label>
+
+                            <label>Low/High Plunge DMG:
+                                <input type="number" id="cdRed" class="display-form">/<input type="number" id="cdRed" class="display-form">
+                            </label>
+                        </fieldset>
+
+                        <!--Elemental Skill-->
+                        <fieldset class="fieldset-style fieldset-position">
+                            <legend>Elemental Skill</legend>
+
+                            <label>Name:
+                                <input type="text" id="nameElSkill" class="display-form">
+                            </label>
+
+                            <label>Level:
+                                <select name="level" id="levelElSkill" class="display-form">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                </select>
+                            </label>
+                        </fieldset>
+
+                        <!--Elemental Burst-->
+                        <fieldset class="fieldset-style fieldset-position">
+                            <legend>Elemental Burst</legend>
+
+                            <label>Name:
+                                <input type="text" id="nameElBurst" class="display-form">
+                            </label>
+
+                            <label>Level:
+                                <select name="level" id="levelElBurst" class="display-form">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                </select>
+                            </label>
+                        </fieldset>
+
+                        <!--1st Ascension Passive-->
+                        <fieldset class="fieldset-style fieldset-position">
+                            <legend>1st Ascension Passive</legend>
+
+                            <label>Name:
+                                <input type="text" id="name1stPassive" class="display-form">
+                            </label>
+
+                            <label>Level:
+                                <select name="level" id="level1stPassive" class="display-form" disabled>
+                                    <option value="1">1</option>
+                                </select>
+                            </label>
+
+                            <span style="color:red">Unlocks at Character Ascension Phase 1!</span>
+                        </fieldset>
+
+                        <!--4th Ascension Passive-->
+                        <fieldset class="fieldset-style fieldset-position">
+                            <legend>4th Ascension Passive</legend>
+
+                            <label>Name:
+                                <input type="text" id="name4thPassive" class="display-form">
+                            </label>
+
+                            <label>Level:
+                                <select name="level" id="level4thPassive" class="display-form" disabled>
+                                    <option value="1">1</option>
+                                </select>
+                            </label>
+
+                            <span style="color:red">Unlocks at Character Ascension Phase 4!</span>
+                        </fieldset>
+
+                        <!--Utility Passive-->
+                        <fieldset class="fieldset-style fieldset-position">
+                            <legend>Utility Passive</legend>
+
+                            <label>Name:
+                                <input type="text" id="nameUtilPassive" class="display-form">
+                            </label>
+
+                            <label>Level:
+                                <select name="level" id="levelUtilPassive" class="display-form" disabled>
+                                    <option value="1">1</option>
+                                </select>
+                            </label>
+                        </fieldset>
+
+                    </details><br>
+                    <input type="button" value="Update!" onclick="myFunction()">
+                    <input type="button" value="Save!" onclick="myFunction()">
+                    <input type="button" value="Reset!" onclick="myFunction()">
+                </form>
+
+            </div>
+
+            <!--results-->
+            <div class="body-container-2">
+            </div>
+        </div>
+    </app-root>
+
+</body>
+
+</html>
