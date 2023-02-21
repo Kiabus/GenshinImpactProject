@@ -14,7 +14,7 @@ For now, if you want create your db on Mongo, you can insert the collection call
 
 Start connection with MongoDB: into the terminal, write *node mongodb.js*
 
-If you want a connection refresh any time you edit the code, start connection into the terminal with "nodemon connectionMongo.js"
+If you want a connection refresh any time you edit the code, start connection into the terminal with "nodemon mongodb.js"
 
 ------------------------------------------------------------------------------------------------------------
 
