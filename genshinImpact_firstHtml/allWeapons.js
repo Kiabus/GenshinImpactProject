@@ -9,6 +9,9 @@ fetch("http://localhost:port/genshin/weapons").then((data)=>{
         tableData += `<tr>
         <td>${values.name}</td>
         <td>${values.type}</td>
+        <td>${values.baseATK}</td>
+        <td>${values.bonusEffect}</td>
+        <td>${values.skill}</td>
         </tr>`;
     });
     document.getElementById("table-weap").innerHTML=tableData;
