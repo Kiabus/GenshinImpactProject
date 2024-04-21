@@ -12,16 +12,17 @@ app.get('/', (req, resp) => {
     resp.send('Welcome to Genshin API')
 })
 
-app.get('/genshin/characters', (req, resp) => {
-    database.collection('characters').find({}).toArray((err, result) => {
+//all characters
+app.get('/genshin/collectionName', (req, resp) => {
+    database.collection('collectionName').find({}).toArray((err, result) => {
         if(err) throw err
         resp.send(result)
     })
 })
 
 //Fischl
-app.get('/genshin/characters/charName', (req, resp) => {
-    database.collection('characters').find({name: "Fisch"}).toArray((err, result) => {
+app.get('/genshin/collectionName/charName', (req, resp) => {
+    database.collection('collectionName').findById(ObjectId("idChar")).toArray((err, result) => {
         if(err) throw err
         resp.send(result)
     })
@@ -29,23 +30,25 @@ app.get('/genshin/characters/charName', (req, resp) => {
 })
 
 //Sara
-app.get('/genshin/characters/charName', (req, resp) => {
-    database.collection('characters').find({name: "Kujou Sara"}).toArray((err, result) => {
+app.get('/genshin/collectionName/charName', (req, resp) => {
+    database.collection('collectionName').findById(ObjectId("idChar")).toArray((err, result) => {
         if(err) throw err
         resp.send(result)
     })
 
 })
 
-app.get('/genshin/weapons', (req, resp) => {
-    database.collection('weapons').find({}).toArray((err, result) => {
+//all weapons
+app.get('/genshin/collectionName', (req, resp) => {
+    database.collection('collectionName').find({}).toArray((err, result) => {
         if(err) throw err
         resp.send(result)
     })
 })
 
-app.get('/genshin/weapons/weaName', (req, resp) => {
-    database.collection('weapons').find({name: "Messenger"}).toArray((err, result) => {
+//Slingshot
+app.get('/api/collectionName/weaponName', (req, resp) => {
+    database.collection('collectionName').findById(ObjectId("idWeapon")).toArray((err, result) => {
         if(err) throw err
         resp.send(result)
     })
